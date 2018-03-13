@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/finish_game", to: "pages#finish_game"
   resources :competences, only: [ :index, :show ]
   resources :questions, only: [ :show ]
+  resources :user_answers, only: [ :create, :update ]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
