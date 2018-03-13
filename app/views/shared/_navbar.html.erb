@@ -18,7 +18,7 @@
       <div class="navbar-wagon-item d-none d-md-block">
         <div class="dropdown">
           <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-left navbar-wagon-dropdown-menu">
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
                 <i class="fas fa-user"></i> <%= t(".profile", default: "Profile") %>
@@ -44,7 +44,20 @@
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item d-md-none">
+  <!-- Bootstrap dropdown -->
+  <!-- <div class="btn-group">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Right-aligned menu
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <button class="dropdown-item" type="button">Action</button>
+      <button class="dropdown-item" type="button">Another action</button>
+      <button class="dropdown-item" type="button">Something else here</button>
+    </div>
+  </div> -->
+
+  <!-- Le Wagon menu not working with Bootstrap 4 -->
+  <!-- <div class="navbar-wagon-item d-md-none">
     <div class="dropdown">
       <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -53,6 +66,7 @@
         <li><a href="#">Other one</a></li>
       </ul>
     </div>
-  </div>
+  </div> -->
+
 </div>
 
