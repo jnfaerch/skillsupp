@@ -11,6 +11,9 @@ $body-bg:                 $light-gray;
 
 // Colors
 $gray-base:       $gray;
+$brand-secondary: $black;
+$brand-light:     $light;
+$brand-dark:      $dark;
 $brand-primary:   $blue;
 $brand-success:   $green;
 $brand-info:      $yellow;
@@ -23,3 +26,7 @@ $border-radius-large: 2px;
 $border-radius-small: 2px;
 
 // Override other variables below!
+$my-bright-primary: rgba(75,189,148,0.68);
+$my-bright-warning: rgba(240,185,23,0.68);
+$my-bright-info: rgba(104,197,193,0.33);
+$my-md-info: rgba(104,197,193,0.65);
