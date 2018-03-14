@@ -4,10 +4,15 @@ class CompetencesController < ApplicationController
     @competences = Competence.all
   end
 
+
   def show
     @competence = Competence.find(params[:id])
+
     #creating the call of games of each copetence
-    @competence_games = @competence.games.select { |g| g.competence_id == @competence.id }
+    @competence_games = @competence.games
+    @questions = Question.all
+
+
     random_game
   end
 

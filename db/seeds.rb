@@ -1,8 +1,8 @@
 puts "Creating a user"
 
+Question.destroy_all
 Game.destroy_all
 Competence.destroy_all
-Question.destroy_all
 User.destroy_all
 
 u = User.create!(name: "test1", email: "test@test.com", password: "123456")
@@ -16,8 +16,6 @@ puts "Creating competences..."
 competence1 =  Competence.create!(
   name: "Competence 1",
   description: "Majestic Events has been created for you to enjoy the best we have to offer."
-
-
 )
 
 competence2 = Competence.create!(
@@ -25,7 +23,7 @@ competence2 = Competence.create!(
 description: "Majestic Events has been created for you to enjoy the best we have to offer."
 )
 
-competence13 = Competence.create!(
+competence3 = Competence.create!(
    name: "Competence 3",
   description: "Majestic Events has been created for you to enjoy the best we have to offer."
 )
@@ -41,7 +39,7 @@ puts "Creating games..."
 game1 = Game.create!(
   name: "Game. 1",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
-  competence: competence13
+  competence: competence1
 )
 
 game2 =  Game.create!(
@@ -65,37 +63,223 @@ game4 = Game.create!(
 game5 = Game.create!(
   name: "Game. 5",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
-  competence: competence1
+  competence: competence3
 )
 
 game6 = Game.create!(
   name: "Game. 6",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
-  competence: competence1
+  competence: competence3
 )
 
 game7 = Game.create!(
   name: "Game. 7",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
-  competence: competence1
+  competence: competence4
 )
 
 game8 = Game.create!(
   name: "Game. 8",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
-  competence: competence1
+  competence: competence4
+)
+
+puts "Creating question..."
+
+
+question1 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game1
 )
 
 
-# Space.create!(
-#   name: "Enjoy your event with flair",
-#   description: "A highly modern atmosphere in the world of aviation awaits you in the Lufthansa training centre.",
-#   address: "Hotel Sherlock, Dark Street, Birmingham, Great Britain",
-#   capacity: 500,
-#   price: 300,
-#   user: v,
-#   remote_photo_url: "https://www.protoura.com/media/img/galleries/event-locations/wien/5_3_Eventloc_VIE_12.jpg"
-# )
+question2 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game1
+)
+
+
+question3 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game1
+)
+
+
+question4 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game1
+)
+
+question5 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game5
+)
+
+question6 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game5
+)
+
+question7 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game5
+)
+
+question8 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game5
+)
+
+question9 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type2 ",
+  game: game6
+)
+
+question10 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game6
+)
+
+question11 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game6
+)
+
+question12 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game6
+)
+question13 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game7
+)
+question14 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game7
+)
+question15 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game7
+)
+question17 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game7
+)
+question18 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game8
+)
+question19 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game8
+)
+question20 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game8
+)
+
+
+question21 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game2
+)
+
+question22 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game2
+)
+
+question23 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game2
+)
+question24 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game2
+)
+question25 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game3
+)
+question26 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game3
+)
+question27 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game3
+)
+question28 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game4
+)
+question29 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game4
+)
+question30 = Question.create!(
+  content: " question 1content content content content content content content content content ",
+  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  question_type: "type1 ",
+  game: game4
+)
+
 
 puts 'Finished!'
 

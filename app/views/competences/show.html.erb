@@ -4,7 +4,8 @@
 
 <!-- list of games -->
 <% @competence_games.each do |game| %>
-  <h2><%=  game.name %></h2>
+  <h2><%=  link_to game.name, question_path(game.questions.first) %></h2>
+
 <% end %>
 
 <!-- random game choose for the user, we have to redirect to start game -->
