@@ -1,7 +1,6 @@
-// Specific CSS for your home-page
+// Specific CSS for home-page
 .col-color-bar {
   height: 9vh;
-  // width: 100%;
 }
 
 .bg-my-md-info {
@@ -29,7 +28,15 @@
 }
 
 .logo-placement {
-  top: calc(22vh + 70px);
+  top: 22vh; // calc(22vh + 70px)
   z-index: 10;
   width: 97%;
+}
+
+.margin-title {
+  margin-top: 30px;
+}
+
+.margin-button {
+  margin-top: 15px;
 }
