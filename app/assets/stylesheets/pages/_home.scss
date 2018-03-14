@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 .col-color-bar {
   height: 9vh;
-  width: 100%;
+  // width: 100%;
 }
 
 .bg-my-md-info {
@@ -26,4 +26,10 @@
 
 .bg-my-black {
   background-color: $my-black;
+}
+
+.logo-placement {
+  top: calc(22vh + 70px);
+  z-index: 10;
+  width: 97%;
 }
