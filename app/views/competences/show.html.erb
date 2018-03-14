@@ -9,4 +9,4 @@
 <% end %>
 
 <!-- random game choose for the user, we have to redirect to start game -->
-<p>"Choose a game for me".  ----><%= link_to @competence.games.sample.name, competence_path  %></p>
+<p>"Choose a game for me".  ----><%= link_to @competence.games.sample.name, question_path(@competence.games.sample.questions.first)  %></p>
