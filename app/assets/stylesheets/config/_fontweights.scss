@@ -4,7 +4,6 @@
 // font-weight-light; --> 300
 // font-italic;
 
-// font-weight definitions:
 
 // name UpSkill
 h1 {
@@ -32,16 +31,18 @@ h5 {
 }
 
 // p personal messages
-.large-p {
+.large-text {
   font-weight: 600; // semi-bold
+  font-size: 1.714rem; // 24px
 }
 
 // p standard
-.base-p {
+.base-text {
   font-weight: 300; // light
+  font-size: 1.429rem; // 20px
 }
 
-// p progress bar
-.small-p {
+.progress-bar-text {
   font-weight: 300; // light
+  font-size: 1.143rem; // 16px
 }
