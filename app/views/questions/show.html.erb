@@ -3,16 +3,26 @@
 
 
 <h2><%= @question.content  %></h2>
-<%= form_tag('check_the_choosen_answer', :method => "post") do %>
+<%= form_tag(user_answers_path, :method => "post") do %>
+
+
   <ul>
-      <li><%= @question.answers[0].content %> - <%= @question.answers[0].id %><%= radio_button_tag(:choosen_answer, "choosen_answer") %></li>
-      <li><%= @question.answers[1].content %> - <%= @question.answers[1].id %><%= radio_button_tag(:choosen_answer, "choosen_answer") %></li>
-      <li><%= @question.answers[2].content %> - <%= @question.answers[2].id %><%= radio_button_tag(:choosen_answer, "choosen_answer") %></li>
-      <li><%= @question.answers[3].content %> - <%= @question.answers[3].id %><%= radio_button_tag(:choosen_answer, "choosen_answer") %></li>
+      <%= hidden_field_tag(:question_id, @question.id) %>
+      <% @question.answers.each do |answer| %>
+        <li>
+          <%= answer.content %> - <%= answer.id %>
+          <%= radio_button_tag(:choosen_answer_id, answer.id) %>
+        </li>
+      <% end %>
   </ul>
   <%= submit_tag("check my answer") %>
+
+
+
+
+
 
 <% end %>
 
 
-<%=  link_to "Check my answer"%>
+

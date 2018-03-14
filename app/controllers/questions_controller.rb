@@ -5,11 +5,11 @@ class QuestionsController < ApplicationController
     @answers = Answer.all
   end
 
-  def check_the_choosen_answer
-    @answers = @question.answers
+  # def check_the_choosen_answer
+  #   @answers = @question.answers
 
 
-  end
+  # end
 
 
 end
