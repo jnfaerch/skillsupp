@@ -3,7 +3,7 @@
 <p><%= @competence.description %></p>
 
 <!-- list of games -->
-<% @competence_games.each do |game| %>
+<% @competence.games.each do |game| %>
   <h2><%=  link_to game.name, question_path(game.questions.first) %></h2>
 
 <% end %>
