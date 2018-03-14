@@ -281,6 +281,174 @@ question30 = Question.create!(
 )
 
 
+
+puts "Creating answers..."
+
+
+answer1 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question1
+)
+
+
+answer2 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question1
+)
+
+
+answer3 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question1
+)
+
+
+answer4 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question1
+)
+
+answer5 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question2
+)
+
+answer6 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question2
+)
+
+answer7 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question2
+)
+
+answer8 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question3
+)
+
+answer9 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question3
+)
+
+answer10 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question3
+)
+
+answer11 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question3
+)
+
+answer12 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question6
+)
+answer13 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question7
+)
+answer14 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question7
+)
+answer15 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question7
+)
+answer17 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question7
+)
+answer18 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question8
+)
+answer19 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question8
+)
+answer20 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question8
+)
+
+answer21 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question9
+)
+
+answer22 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question9
+)
+
+answer23 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question9
+)
+answer24 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question9
+)
+answer25 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question10
+)
+answer26 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question10
+)
+answer27 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question10
+)
+answer28 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question11
+)
+answer29 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question11
+)
+answer30 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question11
+)
+
+
 puts 'Finished!'
 
 

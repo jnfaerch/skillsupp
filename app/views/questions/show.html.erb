@@ -1,6 +1,28 @@
 <p><%= @question.content  %></p>
 <p><%= @question.id %></p>
 
-<%=  link_to "Check my answer"%>
+
+<h2><%= @question.content  %></h2>
+<%= form_tag(user_answers_path, :method => "post") do %>
+
+
+  <ul>
+      <%= hidden_field_tag(:question_id, @question.id) %>
+      <% @question.answers.each do |answer| %>
+        <li>
+          <%= answer.content %> - <%= answer.id %>
+          <%= radio_button_tag(:choosen_answer_id, answer.id) %>
+        </li>
+      <% end %>
+  </ul>
+  <%= submit_tag("check my answer") %>
+
+
+
+
+
+
+<% end %>
+
 
 
