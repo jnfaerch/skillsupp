@@ -1,0 +1,11 @@
+<h1>Welcome to SkillsUpp</h1>
+
+<p><%= image_tag "logo.png", width: 200 %></p>
+<p>Hello <%= current_user.email %>!</p>
+
+<p>Goals: 15/45</p>
+<p>Achives today: 25 points</p>
+
+ <% @competences.each do |competence| %>
+  <h2><%= link_to competence.name, competence_path(competence) %></h2>
+<% end %>

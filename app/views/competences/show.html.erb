@@ -1,0 +1,11 @@
+<h1><%= @competence.name %></h1>
+
+<p><%= @competence.description %></p>
+
+<!-- list of games -->
+<% @competence_games.each do |game| %>
+  <h2><%=  game.name %></h2>
+<% end %>
+
+<!-- random game choose for the user, we have to redirect to start game -->
+<p>"Choose a game for me".  ----><%= link_to @competence.games.sample.name, competence_path  %></p>
