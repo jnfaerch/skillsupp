@@ -1,0 +1,47 @@
+// defaults:
+// font-weight-bold; --> 800
+// font-weight-normal; --> 400
+// font-weight-light; --> 300
+// font-italic;
+
+// font-weight definitions:
+
+// name UpSkill
+h1 {
+  font-weight: 800; // extrabold
+}
+
+// competence title
+h2 {
+  font-weight: 700; // bold
+}
+
+// game title carrousel
+h3 {
+  font-weight: 700; // bold
+}
+
+// buttons
+h4 {
+  font-weight: 500; // medium
+}
+
+// competences title in overview
+h5 {
+  font-weight: 400; // normal
+}
+
+// p personal messages
+.large-p {
+  font-weight: 600; // semi-bold
+}
+
+// p standard
+.base-p {
+  font-weight: 300; // light
+}
+
+// p progress bar
+.small-p {
+  font-weight: 300; // light
+}
