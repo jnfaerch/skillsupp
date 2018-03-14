@@ -6,14 +6,15 @@ class CompetencesController < ApplicationController
 
   def show
     @competence = Competence.find(params[:id])
-    @game = Game.new
+
     #creating the call of games of each copetence
     @competence_games = @competence.games.select { |g| g.competence_id == @competence.id }
+    random_game
   end
 
+  private
 
   def random_game
-    @competence_games = @competence.games.select { |g| g.competence_id == @competence.id }
-    @competence_games.sample
+   @competence_games.sample
   end
 end
