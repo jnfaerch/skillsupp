@@ -29,4 +29,5 @@ class PagesController < ApplicationController
   def finish_game
 
   end
+
 end
