@@ -1,7 +1,12 @@
 <div class="container-fluid">
-  <div class="position-absolute logo-placement d-flex justify-content-center">
-    <%= image_tag("logo_150.png", class: "d-block d-sm-none") %>
-    <%= image_tag("logo_300.png", class: "d-none d-sm-block") %>
+  <div class="position-absolute logo-placement d-flex flex-column justify-content-center">
+    <div class="d-flex justify-content-center">
+      <%= image_tag("logo_150.png", class: "d-block d-sm-none") %>
+      <%= image_tag("logo_300.png", class: "d-none d-sm-block") %>
+    </div>
+    <div class="d-flex justify-content-center">
+      <h1 class="margin-title text-white">Work. Play. Learn.</h1>
+    </div>
   </div>
   <div class="row">
     <div class="col-12 col-color-bar bg-my-black">
@@ -39,8 +44,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-color-bar bg-warning">
-
+    <div class="col-12 col-color-bar bg-warning d-flex justify-content-center">
+      <!-- Login modal button placed in entire col -->
+      <button class="btn btn-lg btn-block btn-warning large-text text-white" data-toggle="modal" data-target="#loginModal">Login</button>
     </div>
   </div>
   <div class="row">
@@ -55,6 +61,39 @@
   </div>
   <div class="row">
     <div class="col-12 col-color-bar bg-my-bright-danger">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-color-bar bg-light">
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login to start</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Rails devise -->
+        <%= simple_form_for(resource, :as => resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :email, required: false, autofocus: true %>
+            <%= f.input :password, required: false %>
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Log in", class: "btn btn-lg btn-primary btn-block text-white" %>
+          </div>
+          <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-sm btn-warning text-white margin-button" %>
+        <% end %>
+        <!-- Rails devise end -->
+      </div>
     </div>
   </div>
 </div>
