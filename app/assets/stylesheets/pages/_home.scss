@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.col-color-bar {
+  height: 9vh;
+  width: 100%;
+}
+
+.bg-my-md-info {
+  background-color: $my-md-info;
+}
+
+.bg-my-bright-primary {
+  background-color: $my-bright-primary;
+}
+
+.bg-my-bright-warning {
+  background-color: $my-bright-warning;
+}
+
+.bg-my-bright-info {
+  background-color: $my-bright-info;
+}
+
+.bg-my-bright-danger {
+  background-color: $my-bright-danger;
+}
+
+.bg-my-black {
+  background-color: $my-black;
+}
