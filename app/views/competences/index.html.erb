@@ -1,12 +1,32 @@
-<h1>Welcome to SkillsUpp</h1>
+<div class="container">
+  <div class="d-flex flex-column justify-content-center"> <!-- container for logo and header -->
+    <div class="d-flex justify-content-center margin-button">
+      <%= image_tag("logo_150.png", class: "d-block d-md-none") %>
+      <%= image_tag("logo_300.png", class: "d-none d-md-block") %>
+    </div>
+    <div class="text-center">
+      <h3>Hello <%= current_user.name %>!</h3>
+      <h4 class="margin-title">Your Goals</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+        <!-- <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div> -->
+      </div>
+      <h4 class="margin-title">Achievements today</h4>
+      <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25 points</div>
+      </div>
+    </div>
+  </div>
 
-<p><%= image_tag "logo.png", width: 200 %></p>
-<p>Hello <%= current_user.name %>!</p>
+  <!-- list os competences -->
+  <div class="row margin-title">
+  <% @competences.each do |competence| %>
+    <div class="col-6 text-center">
+      <div class="competence-card bg-primary">
+        <h2><%= link_to competence.name, competence_path(competence) %></h2>
+      </div>
+    </div> <!-- Col end -->
+  <% end %>
 
-<p>Goals: 15/45</p>
-<p>Achives today: 25 points</p>
-
-<!-- list os competences -->
-<% @competences.each do |competence| %>
-  <h2><%= link_to competence.name, competence_path(competence) %></h2>
-<% end %>
+  </div> <!-- Row end -->
+</div> <!-- Container end -->

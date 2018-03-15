@@ -1,3 +1,8 @@
+<!-- Uggly hack to remove the default navbar on this page only! -->
+<% content_for :navbar do %>
+<input type="hidden">
+<% end %>
+
 <div class="container-fluid">
   <!-- Felxbox used to place logo and other elements over the design bars -->
   <div class="position-absolute logo-placement d-flex flex-column justify-content-center"> <!-- container for logo and header -->
@@ -102,3 +107,4 @@
     </div>
   </div>
 </div> <!-- Modal end -->
+
