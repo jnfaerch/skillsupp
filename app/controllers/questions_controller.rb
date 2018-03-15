@@ -3,13 +3,8 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @answers = Answer.all
+    @game = @question.game
+    @next_question = @question.next
   end
-
-  # def check_the_choosen_answer
-  #   @answers = @question.answers
-
-
-  # end
-
 
 end

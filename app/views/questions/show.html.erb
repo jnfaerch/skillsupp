@@ -1,28 +1,32 @@
 <p><%= @question.content  %></p>
 <p><%= @question.id %></p>
 
+<!-- , display the feedback - if the question has been answered before -->
+<% if params[:submitted] %>
 
-<h2><%= @question.content  %></h2>
-<%= form_tag(user_answers_path, :method => "post") do %>
+  <%= render "shared/feedback_answer" %>
 
-
-  <ul>
-      <%= hidden_field_tag(:question_id, @question.id) %>
-      <% @question.answers.each do |answer| %>
-        <li>
-          <%= answer.content %> - <%= answer.id %>
-          <%= radio_button_tag(:choosen_answer_id, answer.id) %>
-        </li>
-      <% end %>
-  </ul>
-  <%= submit_tag("check my answer") %>
+  <!-- link after the feedback -->
+  <% if @question == @game.questions.last %>
+    <%= link_to "Next question", finish_game_path, class: "btn btn-lg btn-primary" %>
+  <% else %>
+    <%= link_to "Next question", question_path(@next_question.id), class: "btn btn-lg btn-primary" %>
+  <% end %>
 
 
-
-
-
-
+ <!-- display the questions - if the question has never been answered before -->
+<% else %>
+  <p><%= @question.content %></p>
+  <%= form_tag(user_answers_path, :method => "post") do %>
+      <ul>
+          <%= hidden_field_tag(:question_id, @question.id) %>
+          <% @question.answers.each do |answer| %>
+            <li>
+              <%= radio_button_tag(:choosen_answer_id, answer.id) %>
+              <%= answer.id %> - <%= answer.content %>
+            </li>
+          <% end %>
+      </ul>
+      <%= submit_tag("check my answer", class: "btn btn-lg btn-danger") %>
+  <% end %>
 <% end %>
-
-
-
