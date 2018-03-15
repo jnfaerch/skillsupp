@@ -1,14 +1,20 @@
 <div class="container-fluid">
   <!-- Felxbox used to place logo and other elements over the design bars -->
-  <div class="position-absolute logo-placement d-flex flex-column justify-content-center">
+  <div class="position-absolute logo-placement d-flex flex-column justify-content-center"> <!-- container for logo and header -->
     <div class="d-flex justify-content-center">
-      <%= image_tag("logo_150.png", class: "d-block d-sm-none") %>
-      <%= image_tag("logo_300.png", class: "d-none d-sm-block") %>
+      <%= image_tag("logo_150.png", class: "d-block d-md-none") %>
+      <%= image_tag("logo_300.png", class: "d-none d-md-block") %>
     </div>
     <div class="d-flex justify-content-center">
-      <h1 class="margin-title text-white">Work. Play. Learn.</h1>
+      <h1 class="margin-title size-title text-white text-center d-block d-md-none">Work Play Learn</h1>
+      <h1 class="margin-title text-white text-center d-none d-md-block">Work. Play. Learn</h1>
     </div>
-  </div>
+    <div class="d-flex justify-content-center margin-button">
+      <!-- Login modal button -->
+      <button class="btn btn-lg button-opacity text-white d-block d-md-none size-title" data-toggle="modal" data-target="#loginModal">Login</button>
+      <button class="btn btn-lg button-opacity large-text text-white d-none d-md-block" data-toggle="modal" data-target="#loginModal">Login</button>
+    </div>
+  </div> <!-- logo and header end -->
   <div class="row">
     <div class="col-12 col-color-bar bg-my-black">
 
@@ -45,9 +51,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-color-bar bg-warning d-flex justify-content-center">
-      <!-- Login modal button placed in entire col -->
-      <button class="btn btn-lg btn-block btn-warning large-text text-white" data-toggle="modal" data-target="#loginModal">Login</button>
+    <div class="col-12 col-color-bar bg-warning">
     </div>
   </div>
   <div class="row">

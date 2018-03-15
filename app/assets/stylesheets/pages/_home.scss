@@ -28,7 +28,7 @@
 }
 
 .logo-placement {
-  top: 22vh; // calc(22vh + 70px)
+  top: 19vh; // calc(22vh + 70px)
   z-index: 10;
   width: 97%;
 }
@@ -37,6 +37,15 @@
   margin-top: 30px;
 }
 
+.size-title {
+  font-size: 1.6rem;
+}
+
 .margin-button {
   margin-top: 15px;
+}
+
+.button-opacity {
+  background-color: rgba(0,0,0,0);
+  border: 0;
 }
