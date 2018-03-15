@@ -1,0 +1,4 @@
+// Code to override weird Bootstrap jQuery bug where closing a modal adds 'padding-right: 15px'
+body:not(.modal-open){
+  padding-right: 0px !important;
+}

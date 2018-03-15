@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def devise_mapping
-    @devise_mappiing ||= Devise.mappings[:user]
+    @devise_mapping ||= Devise.mappings[:user]
   end
 
   def home
