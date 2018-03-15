@@ -1,4 +1,4 @@
-<p>@question.feedback</p>
+<p><%= @question.feedback %></p>
 <ul>
   <%= hidden_field_tag(:question_id, @question.id) %>
   <% @question.answers.each do |answer| %>
