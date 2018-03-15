@@ -1,24 +1,27 @@
 
-<p><%= @question.feedback  %></p>
-<ul class="list-display">
-
-  <%= hidden_field_tag(:question_id, @question.id) %>
-  <% @question.answers.each do |answer| %>
-    <li>
-      <% if answer.correct == true %>
-        <p class="correct"><%= answer.content %></p >
-      <% else %>
-          <p class="normal_answer"><%= answer.content %></p>
+<div >
+  <div class="top-pading-question-show list-display-feedback">
+    <p><%= @question.feedback  %></p>
+    <!-- List of all the answers -->
+    <ul style="list-style-type: none">
+      <%= hidden_field_tag(:question_id, @question.id) %>
+      <% @question.answers.each do |answer| %>
+        <li>
+          <% if answer.correct == true %>
+            <p class="feedback-correct-answer">
+              <i class="fas fa-thumbs-up"></i>    <%= answer.content %></p >
+          <% else %>
+              <p class="normal_answer"><%= radio_button_tag "tat", true %><%= answer.content %></p>
+          <% end %>
+        </li>
       <% end %>
-    </li>
+    </ul>
+
+    <!-- link after the feedback -->
+    <% if @question == @game.questions.last %>
+      <%= link_to "Next question!", finish_game_path, class: "btn btn-primary fixed-bottom btn-answer-block" %>
+    <% else %>
+      <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-primary fixed-bottom btn-answer-block" %>
   <% end %>
-</ul>
-
-<!-- link after the feedback -->
-    <div class="bg-warning">
-      <% if @question == @game.questions.last %>
-        <%= link_to "Next question!", finish_game_path, class: "btn btn-primary btn-block" %>
-      <% else %>
-        <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-primary btn-block fixedbutton" %>
-      <% end %>
-    </div>
+  </div>
+</div>

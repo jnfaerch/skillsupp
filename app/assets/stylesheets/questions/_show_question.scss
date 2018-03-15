@@ -1,12 +1,20 @@
-.list-display {
+.list-display-feedback {
   // position: relative;
+  max-height: 80vh;
+  overflow: scroll;
+  padding: 0.75rem 1.25rem;
+  list-style-type: none;
+}
+.list-display-question {
+  // position: relative;
+  max-height: 80vh;
+  overflow: scroll;
   padding: 0.75rem 1.25rem;
   list-style-type: none;
 }
 
-.correct {
-    background: $green;
-    // position: relative;
+.feedback-correct-answer {
+    background: $info;
     padding: 0.75rem 1.25rem;
     margin-bottom: 1rem;
     border: 1px solid transparent;
@@ -16,14 +24,31 @@
 }
 
 .normal_answer {
-    // position: relative;
     padding: 0.75rem 1.25rem;
     margin-bottom: 1rem;
     margin: 0;
 }
 
-.fixedbutton {
-    position: fixed;
+.btn-answer-block {
+    color: white;
     bottom: 0px;
-    margin: 20px;
+    margin: 3%;
+    width: 94%;
 }
+
+.top-pading-question-show{
+  padding-top: 20px;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"]  {
+    display:inline-block;
+    width:19px;
+    height:25px;
+    margin:1px 4px ;
+    vertical-align:middle;
+}
+
