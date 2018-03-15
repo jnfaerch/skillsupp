@@ -1,0 +1,29 @@
+.list-display {
+  // position: relative;
+  padding: 0.75rem 1.25rem;
+  list-style-type: none;
+}
+
+.correct {
+    background: $green;
+    // position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    margin: 0;
+    color: white;
+}
+
+.normal_answer {
+    // position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    margin: 0;
+}
+
+.fixedbutton {
+    position: fixed;
+    bottom: 0px;
+    margin: 20px;
+}

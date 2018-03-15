@@ -1,13 +1,15 @@
 <p><%= @question.content %></p>
 <%= form_tag(user_answers_path, :method => "post") do %>
-  <ul>
+  <ul class="list-display">
       <%= hidden_field_tag(:question_id, @question.id) %>
       <% @question.answers.each do |answer| %>
-        <li>
+        <li class="normal_answer">
           <%= radio_button_tag(:choosen_answer_id, answer.id) %>
-          <%= answer.id %> - <%= answer.content %>
+          <%= answer.content %>
         </li>
       <% end %>
   </ul>
-  <%= submit_tag("check my answer", class: "btn btn-lg btn-danger") %>
+   <div> <%= submit_tag("Check my answer!", class: "btn btn-lg btn-danger btn-block ") %>
+
+   </div>
 <% end %>

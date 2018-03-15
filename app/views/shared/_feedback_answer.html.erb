@@ -1,14 +1,24 @@
-<p><%= @question.feedback %></p>
-<ul>
+
+<p><%= @question.feedback  %></p>
+<ul class="list-display">
+
   <%= hidden_field_tag(:question_id, @question.id) %>
   <% @question.answers.each do |answer| %>
     <li>
       <% if answer.correct == true %>
-        <strong><%= answer.id %> - <%= answer.content %></strong>
+        <p class="correct"><%= answer.content %></p >
       <% else %>
-          <p><%= answer.id %> - <%= answer.content %></p>
+          <p class="normal_answer"><%= answer.content %></p>
       <% end %>
     </li>
   <% end %>
 </ul>
 
+<!-- link after the feedback -->
+    <div class="bg-warning">
+      <% if @question == @game.questions.last %>
+        <%= link_to "Next question!", finish_game_path, class: "btn btn-primary btn-block" %>
+      <% else %>
+        <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-primary btn-block fixedbutton" %>
+      <% end %>
+    </div>
