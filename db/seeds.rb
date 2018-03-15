@@ -14,22 +14,22 @@ w = User.create!(name: "test3", email: "test3@test.com", password: "123456")
 puts "Creating competences..."
 
 competence1 =  Competence.create!(
-  name: "Competence 1",
-  description: "Majestic Events has been created for you to enjoy the best we have to offer."
+  name: "Social Skills",
+  description: "Human beings are sociable creatures and we have developed many ways to communicate our messages, thoughts and feelings with others. What is said is influenced by both verbal language and the way we use it - tone of voice, volume of speech and the words we choose - as well as by more subtle messages such as body language, gestures and other non-verbal communication methods."
 )
 
 competence2 = Competence.create!(
-   name: "Competence 2",
-description: "Majestic Events has been created for you to enjoy the best we have to offer."
+   name: "Self Management Skills",
+description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment. Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy."
 )
 
 competence3 = Competence.create!(
-   name: "Competence 3",
+   name: "Corporate Knowledge",
   description: "Majestic Events has been created for you to enjoy the best we have to offer."
 )
 
 competence4 = Competence.create!(
-  name: "Competence 4",
+  name: "Expertise",
   description: "Majestic Events has been created for you to enjoy the best we have to offer."
 )
 
