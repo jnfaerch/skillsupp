@@ -1,11 +1,9 @@
 class UserAnswersController < ApplicationController
 
   def create
-
     @question = Question.find(params[:question_id])
     @answer = Answer.find(params[:choosen_answer_id])
     correct = @answer.correct
-
     @user_answer = UserAnswer.new(
       user_id: current_user.id,
       question_id: params[:question_id],
@@ -17,7 +15,4 @@ class UserAnswersController < ApplicationController
 
   def update
   end
-
-  private
-
 end
