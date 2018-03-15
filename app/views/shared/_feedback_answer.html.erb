@@ -1,5 +1,5 @@
-<p class = "list-display"><%= @question.feedback  %></p>
-<ul class = "list-display">
+<p><%= @question.feedback  %></p>
+<ul class="list-display">
   <%= hidden_field_tag(:question_id, @question.id) %>
   <% @question.answers.each do |answer| %>
     <li>
@@ -13,10 +13,10 @@
 </ul>
 
 <!-- link after the feedback -->
-    <div >
+    <div class="bg-warning">
       <% if @question == @game.questions.last %>
         <%= link_to "Next question!", finish_game_path, class: "btn btn-primary btn-block" %>
       <% else %>
-        <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-primary btn-block" %>
+        <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-primary btn-block fixedbutton" %>
       <% end %>
     </div>
