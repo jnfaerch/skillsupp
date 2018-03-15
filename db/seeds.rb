@@ -1,10 +1,11 @@
 puts "Creating a user"
 
+UserAnswer.destroy_all
+Answer.destroy_all
 Question.destroy_all
 Game.destroy_all
 Competence.destroy_all
 User.destroy_all
-
 u = User.create!(name: "test1", email: "test@test.com", password: "123456")
 v = User.create!(name: "test2", email: "test2@test.com", password: "123456")
 w = User.create!(name: "test3", email: "test3@test.com", password: "123456")
@@ -449,6 +450,52 @@ answer30 = Answer.create!(
 )
 
 
+answer32 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question6
+)
+
+answer33 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question6
+)
+answer34 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question6
+)
+answer35 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question7
+)
+answer36 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question7
+)
+answer37 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question7
+)
+answer38 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: true,
+  question: question14
+)
+answer39 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question14
+)
+answer40 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question14
+)
 puts 'Finished!'
 
 
