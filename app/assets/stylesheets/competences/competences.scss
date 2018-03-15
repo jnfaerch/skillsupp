@@ -1,0 +1,46 @@
+.competence-body-link {
+  position: relative;
+  height: 95%;
+}
+
+.competence-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  background: black;
+  opacity: 0;
+}
+
+.competence-link:hover {
+  opacity: 0.1;
+}
+
+// Below is to set the specified color for each competence
+
+.social_skills {
+  background-color: $brand-primary;
+}
+
+.self_management_skills {
+  background-color: $brand-info;
+}
+
+.corporate_culture {
+  background-color: $my-black;
+}
+
+.expertise {
+  background-color: $brand-warning;
+}
+
+.image-size-control {
+  width: 70%;
+}
+
+.image-size-100px-logo {
+  width: 100px;
+  height: 100px;
+}
