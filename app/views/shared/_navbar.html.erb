@@ -1,8 +1,9 @@
 <div class="navbar-wagon d-flex">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= image_tag "logo_150.png", height: 50 %>
   <% end %>
+  <h3>SkillsUpp</h3>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right d-flex">
@@ -10,9 +11,9 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%#= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%#= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%#= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item d-none d-md-block">
@@ -25,9 +26,9 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
-                <i class="fas fa-cog"></i>  <%= t(".settings", default: "Settings") %>
-              <% end %>
+              <%#= link_to "#" do %>
+                <!-- <i class="fas fa-cog"></i>  <%= t(".settings", default: "Settings") %> -->
+              <%# end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
@@ -69,4 +70,3 @@
   </div> -->
 
 </div>
-

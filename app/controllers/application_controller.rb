@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
     competences_path
   end
 
+  def destroy_user_session_path
+    root
+  end
+
 end
