@@ -1,32 +1,44 @@
 <div class="container">
   <div class="d-flex flex-column justify-content-center"> <!-- container for logo and header -->
     <div class="d-flex justify-content-center margin-button">
-      <%= image_tag("logo_150.png", class: "d-block d-md-none") %>
+      <%= image_tag("logo_150.png", class: "d-block d-md-none image-size-100px-logo") %>
       <%= image_tag("logo_300.png", class: "d-none d-md-block") %>
     </div>
     <div class="text-center">
-      <h3>Hello <%= current_user.name %>!</h3>
-      <h4 class="margin-title">Your Goals</h4>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
-        <!-- <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div> -->
-      </div>
-      <h4 class="margin-title">Achievements today</h4>
-      <div class="progress">
-        <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25 points</div>
+      <h4>Hello <%= current_user.name %>!</h4>
+      <div class="row">
+        <div class="col-6 d-flex flex-column">
+          <p class="d-block d-md-none">Your Goals</p>
+          <h3 class="d-none d-md-block">Your Goals</h3>
+          <div class="progress mt-auto">
+            <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+            <!-- <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div> -->
+          </div>
+        </div>
+        <div class="col-6 d-flex flex-column">
+          <p class="d-block d-md-none">Achievements today</p>
+          <h3 class="d-none d-md-block">Achievements today</h3>
+          <div class="progress mt-auto">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25 points</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- list os competences -->
   <div class="row margin-title">
-  <% @competences.each do |competence| %>
-    <div class="col-6 text-center">
-      <div class="competence-card bg-primary">
-        <h2><%= link_to competence.name, competence_path(competence) %></h2>
-      </div>
-    </div> <!-- Col end -->
-  <% end %>
-
+    <% @competences.each do |competence| %>
+      <div class="col-6 text-center">
+        <div class="card text-white <%= competence.image_name %> mb-3 competence-body-link"> <!-- Card -->
+          <div class="card-body d-flex flex-column">
+            <p class="d-block d-md-none"><%= competence.name %></p>
+            <h2 class="d-none d-md-block"><%= competence.name %></h2>
+            <div class="mt-auto"><%= image_tag(competence.image_name, class: "img-fluid image-size-control") %></div>
+          </div>
+          <%= link_to "", competence_path(competence), class: "competence-link" %>
+        </div> <!-- Card end -->
+      </div> <!-- Col end -->
+    <% end %> <!-- Loop end -->
   </div> <!-- Row end -->
 </div> <!-- Container end -->
