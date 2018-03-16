@@ -9,8 +9,11 @@ class UserAnswersController < ApplicationController
       question_id: params[:question_id],
       correct: correct
     )
-    @user_answer.save
+    if @user_answer.save
     redirect_to question_path(@question, {submitted: true})
+    else
+      render :new
+    end
   end
 
   def update
