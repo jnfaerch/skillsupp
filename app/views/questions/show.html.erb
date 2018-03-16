@@ -1,4 +1,6 @@
-<div class="container">
+<div class="game_name_in_question_show">
+  <h2><%= @game.name %></h2>
+</div>
   <!--  Display the feedback - if the question has been answered before -->
   <% if params[:submitted] %>
     <%= render "shared/feedback_answer" %>
@@ -6,4 +8,3 @@
   <% else %>
     <%= render "shared/question_display" %>
   <% end %>
-</div>

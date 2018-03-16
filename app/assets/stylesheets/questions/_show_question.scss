@@ -1,38 +1,41 @@
 .list-display-feedback {
   // position: relative;
-  max-height: 80vh;
+  max-height: 70vh;
   overflow: scroll;
   padding: 0.75rem 1.25rem;
   list-style-type: none;
+  margin-top: 10px;
 }
 .list-display-question {
   // position: relative;
-  max-height: 80vh;
+  max-height: 70vh;
   overflow: scroll;
   padding: 0.75rem 1.25rem;
   list-style-type: none;
+  margin-top: 10px;
 }
 
+ul {
+  margin-left: -60px;
+}
 .feedback-correct-answer {
-    background: $info;
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid transparent;
+    background: #68C5C1;
+    padding: 11px 4px;
+    border: 2px solid transparent;
     border-radius: 0.25rem;
-    margin: 0;
+    margin-left: 18px;
     color: white;
 }
 
 .normal_answer {
     padding: 0.75rem 1.25rem;
-    margin-bottom: 1rem;
     margin: 0;
 }
 
 .btn-answer-block {
     color: white;
     bottom: 0px;
-    margin: 3%;
+    margin: 3.2%;
     width: 94%;
 }
 
@@ -46,9 +49,24 @@ input[type="radio"] {
 
 input[type="radio"]  {
     display:inline-block;
-    width:19px;
+    width:25px;
     height:25px;
     margin:1px 4px ;
     vertical-align:middle;
+}
+
+.game_name_in_question_show {
+  padding: 10px;
+  background-color: $blue;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  width: 100%;
+}
+
+.game_name_in_question_show h2 h5{
+  line-height: 1;
+  margin-bottom: 0;
 }
 

@@ -22,9 +22,9 @@
 
     <!-- link after the feedback -->
     <% if @question == @game.questions.last %>
-      <%= link_to "Next question!", finish_game_path, class: "btn btn-primary fixed-bottom btn-answer-block" %>
+      <%= link_to "Next question!", finish_game_path, class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
     <% else %>
-      <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-primary fixed-bottom btn-answer-block" %>
+      <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
   <% end %>
   </div>
 </div>
