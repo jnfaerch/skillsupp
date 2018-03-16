@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   end
 
   def home
-    render :home
+
   end
 
   def welcome
