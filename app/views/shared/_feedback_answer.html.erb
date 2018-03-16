@@ -9,9 +9,11 @@
         <li>
           <% if answer.correct == true %>
             <p class="feedback-correct-answer">
-              <i class="fas fa-thumbs-up"></i>    <%= answer.content %></p >
+              <i class="fas fa-thumbs-up"></i>
+                  <%= answer.content %></p >
           <% else %>
-              <p class="normal_answer"><%= radio_button_tag "tat", true %><%= answer.content %></p>
+            <p class="normal_answer"><i class="far fa-thumbs-down"></i>
+                <%= answer.content %></p>
           <% end %>
         </li>
       <% end %>
