@@ -5,7 +5,7 @@
         <%= hidden_field_tag(:question_id, @question.id) %>
         <% @question.answers.each do |answer| %>
           <li class="normal_answer">
-            <%= radio_button_tag(:choosen_answer_id, answer.id) %>
+            <%= radio_button_tag(:choosen_answer_id, answer.id) %>&nbsp;
             <%= answer.content %>
           </li>
         <% end %>
