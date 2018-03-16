@@ -21,6 +21,11 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+# Precompiling on Heroku fails so added this
+group :assets do
+  gem 'turbo-sprockets-rails3'
+end
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
