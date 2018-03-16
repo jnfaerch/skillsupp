@@ -1,6 +1,7 @@
 .competence-body-link {
   position: relative;
   height: 95%;
+  word-wrap: normal;
 }
 
 .competence-link {
@@ -24,7 +25,7 @@
   background-color: $brand-primary;
 }
 
-.self_management_skills {
+.self_management {
   background-color: $brand-info;
 }
 

@@ -6,9 +6,9 @@ Question.destroy_all
 Game.destroy_all
 Competence.destroy_all
 User.destroy_all
-u = User.create!(name: "test1", email: "test@test.com", password: "123456")
-v = User.create!(name: "test2", email: "test2@test.com", password: "123456")
-w = User.create!(name: "test3", email: "test3@test.com", password: "123456")
+u = User.create!(name: "Tanja", email: "test@test.com", password: "123456")
+v = User.create!(name: "Juandi", email: "test2@test.com", password: "123456")
+w = User.create!(name: "Johan", email: "test3@test.com", password: "123456")
 
 
 
@@ -20,7 +20,7 @@ competence1 =  Competence.create!(
 )
 
 competence2 = Competence.create!(
-   name: "Self Management Skills",
+   name: "Self Management",
 description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment. Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy."
 )
 
