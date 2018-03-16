@@ -12,18 +12,30 @@
   line-height: 1;
   margin-bottom: 0;
 }
+
 .competence_description {
   padding-top: 10px;
   overflow-y:scroll;
 }
 
-.card {
+.card-competence {
   text-decoration: none;
   text-align: center;
   background-color: $my-bright-primary;
   border-color: $my-bright-primary;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.card-competence h2 {
+  color: white;
+  height: 80px;
+  padding-left: 67px;
+  padding-right: 36px;
+}
+
+.card-competene :hover {
+  text-decoration: none;
 }
 
 .carousel-item {
@@ -51,17 +63,6 @@
 
 .carousel-slide {
 
-}
-
-.card h2 {
-  color: white;
-  height: 80px;
-  padding-left: 67px;
-  padding-right: 36px;
-}
-
-.card :hover {
-  text-decoration: none;
 }
 
 .button-random {

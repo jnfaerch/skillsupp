@@ -12,7 +12,7 @@
     <div class="carousel-inner row">
       <% @competence.games.each.with_index do |game, i| %>
         <div class="carousel-item <%= 'active' if i == 1 %>">
-          <div class="card col-12">
+          <div class="card-competence col-12">
             <h2><%= link_to game.name, question_path(game.questions.first) %></h2>
           </div>
         </div>
