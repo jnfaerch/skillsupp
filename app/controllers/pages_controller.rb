@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   end
 
   def finish_game
-
+    @competences = Competence.all
   end
 
 end

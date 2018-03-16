@@ -1,0 +1,23 @@
+.div-logo {
+ height: 30vh;
+ background: $my-bright-info;
+}
+
+.div-text {
+ height: 70vh;
+ background: $danger;
+ color: white;
+ text-align: center
+}
+
+.div-bottom-competences {
+  bottom: -8px;
+}
+
+.logo-placement {
+  padding: 15px;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
