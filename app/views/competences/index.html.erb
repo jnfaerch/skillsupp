@@ -8,18 +8,18 @@
       <h4>Hello <%= current_user.name %>!</h4>
       <div class="row">
         <div class="col-6 d-flex flex-column">
-          <p class="d-block d-md-none">Your Goals: <strong>35%</strong></p>
-          <h3 class="d-none d-md-block">Your Goals: <strong>35%</strong></h3>
+          <p class="d-block d-md-none">Your Goals: <strong><span id="goalTextMobile"></span></strong></p>
+          <h3 class="d-none d-md-block">Your Goals: <strong><span id="goalText"></span></strong></h3>
           <div class="progress mt-auto">
-            <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="goalBar" class="progress-bar bg-danger" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
             <!-- <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div> -->
           </div>
         </div>
         <div class="col-6 d-flex flex-column">
-          <p class="d-block d-md-none">Achievements today: <strong>25</strong></p>
-          <h3 class="d-none d-md-block">Achievements today: <strong>25</strong></h3>
+          <p class="d-block d-md-none">Achievements today: <strong><span id="achievementTextMobile"></span></strong></p>
+          <h3 class="d-none d-md-block">Achievements today: <strong><span id="achievementText"></span></strong></h3>
           <div class="progress mt-auto">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div id="achievementBar" class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -28,13 +28,38 @@
 
   <!-- list os competences -->
   <div class="row margin-title">
-    <% @competences.each do |competence| %>
+    <% @competences.each.with_index do |competence, index| %>
       <div class="col-6 text-center">
-        <div class="card text-white <%= competence.image_name %> mb-3 competence-body-link"> <!-- Card -->
+        <div class="card text-white mb-3 competence-body-link
+          <% if index == 0 %>
+            bg-primary
+          <% elsif index == 1 %>
+            bg-info
+          <% elsif index == 2 %>
+            bg-my-black
+          <% elsif index == 3 %>
+            bg-warning
+          <% else %>
+            bg-info
+          <% end %>
+        "> <!-- Card with background color set according to class -->
           <div class="card-body d-flex flex-column">
             <p class="d-block d-md-none"><%= competence.name %></p>
             <h2 class="d-none d-md-block"><%= competence.name %></h2>
-            <div class="mt-auto"><%= image_tag(competence.image_name, class: "img-fluid image-size-control") %></div>
+            <div class="mt-auto">
+              <% if index == 0 %>
+                <i class="far fa-paper-plane fa-9x img-fluid"></i>
+              <% elsif index == 1 %>
+                <i class="fas fa-star fa-9x img-fluid"></i>
+              <% elsif index == 2 %>
+                <i class="far fa-heart fa-9x img-fluid"></i>
+              <% elsif index == 3 %>
+                <i class="fas fa-search fa-9x img-fluid"></i>
+              <% else %>
+                <i class="far fa-heart fa-9x img-fluid"></i>
+              <% end %>
+            </div>
+            <!-- <div class="mt-auto"><%= image_tag(competence.image_name, class: "img-fluid image-size-control") %></div> -->
           </div>
           <%= link_to "", competence_path(competence), class: "competence-link" %>
         </div> <!-- Card end -->

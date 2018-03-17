@@ -2,6 +2,7 @@ class CompetencesController < ApplicationController
 
   def index
     @competences = Competence.all
+    @user = current_user
   end
 
   def show
