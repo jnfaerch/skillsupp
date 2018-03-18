@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="competenceProgressBarPage">
   <div class="d-flex flex-column justify-content-center"> <!-- container for logo and header -->
     <div class="d-flex justify-content-center margin-button">
       <%= image_tag("logo_150.png", class: "d-block d-md-none image-size-100px-logo") %>
@@ -51,7 +51,7 @@
               <% if index == 0 %>
                 <i class="far fa-paper-plane fa-9x img-fluid"></i>
               <% elsif index == 1 %>
-                <i class="fas fa-star fa-9x img-fluid"></i>
+                <i class="far fa-star fa-9x img-fluid"></i>
               <% elsif index == 2 %>
                 <i class="far fa-heart fa-9x img-fluid"></i>
               <% elsif index == 3 %>
@@ -60,7 +60,7 @@
                 <i class="far fa-heart fa-9x img-fluid"></i>
               <% end %>
             </div>
-            <!-- <div class="mt-auto"><%= image_tag(competence.image_name, class: "img-fluid image-size-control") %></div> -->
+            <!-- <div class="mt-auto"><%#= image_tag(competence.image_name, class: "img-fluid image-size-control") %></div> -->
           </div>
           <%= link_to "", competence_path(competence), class: "competence-link" %>
         </div> <!-- Card end -->

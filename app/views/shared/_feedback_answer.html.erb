@@ -1,30 +1,29 @@
-
-<div >
-  <div class="top-pading-question-show list-display-feedback">
+<div class="container">
+  <div class="top-pading-question-show list-display-feedback"> <!-- Why is the bottom button included in this? -->
     <p><%= @question.feedback  %></p>
     <!-- List of all the answers -->
-    <ul style="list-style-type: none">
+    <ul class="list-group list-group-flush">
       <%= hidden_field_tag(:question_id, @question.id) %>
       <% @question.answers.each do |answer| %>
-        <li>
-          <% if answer.correct == true %>
-            <p class="feedback-correct-answer">
-              <i class="fas fa-thumbs-up"></i>&nbsp;
-              <%= answer.content %></p >
-          <% else %>
-              <p class="normal_answer">
-                <i class="far fa-thumbs-down"></i>&nbsp;
-                <%= answer.content %></p>
-          <% end %>
-        </li>
+        <% if answer.correct == true %>
+          <li class="list-group-item bg-info d-flex">
+            <h5><i class="fas fa-thumbs-up text-danger"></i>&nbsp;</h5>
+            <h5>&nbsp;-&nbsp;<%= answer.content %></h5>
+          </li>
+        <% else %>
+          <li class="list-group-item d-flex">
+            <h5><i class="far fa-thumbs-down"></i>&nbsp;</h5>
+            <h5>&nbsp;-&nbsp;<%= answer.content %></h5>
+          </li>
+        <% end %>
       <% end %>
     </ul>
+  </div> <!-- list-display-feedback end -->
 
     <!-- link after the feedback -->
-    <% if @question == @game.questions.last %>
-      <%= link_to "Next question!", finish_game_path, class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
-    <% else %>
-      <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
-  <% end %>
-  </div>
-</div>
+  <% if @question == @game.questions.last %>
+    <%= link_to "Finish Game!", finish_game_path, class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
+  <% else %>
+    <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
+  <% end %> <!-- Link end -->
+</div> <!-- Container end -->

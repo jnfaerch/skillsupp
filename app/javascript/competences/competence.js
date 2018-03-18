@@ -1,5 +1,5 @@
 // function for animated progress bars
-$(function() {
+$(function animatedtotalprogress() {
   var current_progress = 0;
   var current_progress_wrong = 0;
   var interval = setInterval(function() {
@@ -21,7 +21,7 @@ $(function() {
   }, 500);
 });
 
-$(function() {
+$(function animateddailyprogress() {
   var current_progress = 0;
   var interval = setInterval(function() {
     current_progress = document.getElementById('achievementBar').getAttribute('aria-valuenow');
