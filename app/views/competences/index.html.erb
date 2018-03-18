@@ -11,8 +11,8 @@
           <p class="d-block d-md-none">Your Goals: <strong><span id="goalTextMobile"></span></strong></p>
           <h3 class="d-none d-md-block">Your Goals: <strong><span id="goalText"></span></strong></h3>
           <div class="progress mt-auto">
-            <div id="goalBar" class="progress-bar bg-primary" role="progressbar" aria-valuenow="<%= aUserAnswer.where(:user_id => @user, :correct => true).count * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-            <div id="goalBarWrong" class="progress-bar bg-danger" role="progressbar" aria-valuenow="<%= UserAnswer.where(:user_id => @user, :correct => false).count * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+            <div id="goalBar" class="progress-bar bg-primary" role="progressbar" aria-valuenow="<%= @user_correct_answers * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+            <div id="goalBarWrong" class="progress-bar bg-danger" role="progressbar" aria-valuenow="<%= @user_wrong_answers * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
             <!-- <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div> -->
           </div>
         </div>
