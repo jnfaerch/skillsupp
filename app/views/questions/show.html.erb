@@ -1,10 +1,23 @@
 <div class="game_name_in_question_show">
   <h2><%= @game.name %></h2>
 </div>
-  <!--  Display the feedback - if the question has been answered before -->
-  <% if params[:submitted] %>
-    <%= render "shared/feedback_answer" %>
-   <!-- Display the questions - if the question has never been answered before -->
-  <% else %>
-    <%= render "shared/question_display" %>
-  <% end %>
+
+<!-- Video embedding -->
+<iframe
+  width="100%" height="210"
+  src="https://www.youtube.com/embed/UkYsd0Ibxp4?rel=0"
+  frameborder="0" allowfullscreen
+  style="border: solid 1px white">
+</iframe>
+
+<!--  Display the feedback - if the question has been answered before -->
+<% if params[:submitted] %>
+  <%= render "shared/feedback_answer" %>
+ <!-- Display the questions - if the question has never been answered before -->
+<% else %>
+  <%= render "shared/question_display" %>
+<% end %>
+
+
+<!-- https://www.youtube.com/embed/#{UkYsd0Ibxp4}?rel=0
+ -->
