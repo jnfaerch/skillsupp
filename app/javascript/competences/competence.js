@@ -1,16 +1,21 @@
 // function for animated progress bars
 $(function() {
   var current_progress = 0;
+  var current_progress_wrong = 0;
   var interval = setInterval(function() {
-    current_progress = 35;
+    current_progress = document.getElementById('goalBar').getAttribute('aria-valuenow')
+    current_progress_wrong = document.getElementById('goalBarWrong').getAttribute('aria-valuenow') * 1;
     $("#goalBar")
     .css("width", current_progress + "%")
     .attr("aria-valuenow", current_progress);
+    $("#goalBarWrong")
+    .css("width", current_progress_wrong + "%")
+    .attr("aria-valuenow", current_progress_wrong);
     $("#goalText")
-    .text(current_progress + "%");
+    .text(current_progress * 1 + current_progress_wrong * 1 + "%");
     $("#goalTextMobile")
-    .text(current_progress + "%");
-    if (current_progress >= 35)
+    .text(current_progress * 1 + current_progress_wrong * 1 + "%");
+    if (current_progress >= 100)
 
   clearInterval(interval);
   }, 500);
@@ -19,7 +24,7 @@ $(function() {
 $(function() {
   var current_progress = 0;
   var interval = setInterval(function() {
-    current_progress = 100;
+    current_progress = document.getElementById('achievementBar').getAttribute('aria-valuenow');
     $("#achievementBar")
     .css("width", current_progress + "%")
     .attr("aria-valuenow", current_progress);
