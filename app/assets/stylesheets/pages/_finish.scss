@@ -4,14 +4,14 @@
 }
 
 .div-text {
- height: 70vh;
+ height: calc(70vh - 70px);
  background: $danger;
  color: white;
  text-align: center
 }
 
 .div-bottom-competences {
-  bottom: -8px;
+  // bottom: -8px;
 }
 
 .logo-placement {

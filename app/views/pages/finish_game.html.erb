@@ -1,5 +1,6 @@
 <div class="mx-auto div-logo " >
-  <div class="logo-placement"><%= image_tag "logo-crown.png", alt: "logo", width: 300 %></div>
+  <div class="logo-placement"><%= image_tag "logo-crown.png", alt: "logo", width: 300 %>
+  </div>
 </div>
 
 <div class="div-text">
@@ -12,8 +13,9 @@
         <div class="text-center">
           <div class="card text-white <%= competence.image_name %> mb-3 competence-body-link"> <!-- Card -->
             <div class="card-body d-flex flex-column">
-
-              <div class="mt-auto"><%= image_tag(competence.image_name, class: "img-fluid image-size-control") %></div>
+              <div class="mt-auto">
+                <i class="<%= competence.color.icon %> fa-9x img-fluid image-size-control"></i>
+              </div>
             </div>
             <%= link_to "", competence_path(competence), class: "competence-link" %>
           </div> <!-- Card end -->
