@@ -56,7 +56,7 @@ game3 = Game.create!(
 )
 
 game4 = Game.create!(
-  name: "Presentation",
+  name: "Time Management",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
   competence: competence2
 )
@@ -68,7 +68,7 @@ game5 = Game.create!(
 )
 
 game6 = Game.create!(
-  name: "Time Management",
+  name: "Presentation",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
   competence: competence2
 )
@@ -111,6 +111,27 @@ game12 = Game.create!(
 
 puts "Creating question..."
 
+# Game 1 / social skills
+question1 = Question.create!(
+  content: "You are in a bad mood and the first person you see is the one you hate. How do you react?",
+  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea. You never know when you'll have to work together next time...",
+  question_type: "type2 ",
+  game: game1
+)
+
+question2 = Question.create!(
+  content: "Choose the right answer for successful communication with your colleagues:",
+  feedback: "All those who communicate with screams have so far perished at some point...",
+  question_type: "type2 ",
+  game: game1
+)
+
+question3 = Question.create!(
+  content: "What is the best way to express your joy about a successful project?",
+  feedback: "It is always a good idea to celebrate! Just don't get the idea of flirting drunk with your boss!",
+  question_type: "type2 ",
+  game: game1
+)
 
 question4 = Question.create!(
   content: "What is the first step to successfully assert your concern with your team members?",
@@ -125,30 +146,7 @@ And how much is the person convinced of the sense/nonsense of the project?
   game: game1
 )
 
-
-question1 = Question.create!(
-  content: "You are in a bad mood and the first person you see is the one you hate. How do you react?",
-  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea. You never know when you'll have to work together next time...",
-  question_type: "type2 ",
-  game: game1
-)
-
-
-question3 = Question.create!(
-  content: "What is the best way to express your joy about a successful project?",
-  feedback: "It is always a good idea to celebrate! Just don't get the idea of flirting drunk with your boss!",
-  question_type: "type2 ",
-  game: game1
-)
-
-
-question2 = Question.create!(
-  content: "Choose the right answer for successful communication with your colleagues:",
-  feedback: "All those who communicate with screams have so far perished at some point...",
-  question_type: "type2 ",
-  game: game1
-)
-
+# game 2 / social skills
 question5 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -184,6 +182,7 @@ question9 = Question.create!(
   game: game3
 )
 
+# game 3 / social skills
 question10 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -204,15 +203,17 @@ question12 = Question.create!(
   question_type: "type1 ",
   game: game3
 )
+
+# game 4 / self management
 question13 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  content: "When a football player scores a perfectly scored own goal, then he is...",
+  feedback: "Now think by yourself: What's worse in the daily business, not effective or not efficient? Why?",
   question_type: "type1 ",
   game: game4
 )
 question14 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  content: "How much buffering time do you have to plan for unforeseen events these days?",
+  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times. This requires flexible time management.",
   question_type: "type1 ",
   game: game4
 )
@@ -228,6 +229,8 @@ question16 = Question.create!(
   question_type: "type1 ",
   game: game4
 )
+
+# game 5 / self management
 question17 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -252,9 +255,11 @@ question20 = Question.create!(
   question_type: "type1 ",
   game: game5
 )
+
+# game 6 / self management
 question21 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  content: "How much buffering time do you have to plan for unforeseen events these days?",
+  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times. This requires flexible time management.",
   question_type: "type1 ",
   game: game6
 )
@@ -277,6 +282,8 @@ question24 = Question.create!(
   question_type: "type1 ",
   game: game6
 )
+
+# game 7 / corporate culture
 question25 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -301,6 +308,8 @@ question28 = Question.create!(
   question_type: "type1 ",
   game: game7
 )
+
+# game 8 / corporate culture
 question29 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -326,6 +335,8 @@ question32 = Question.create!(
   question_type: "type1 ",
   game: game8
 )
+
+# game 9 / corporate culture
 question33 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -350,6 +361,8 @@ question36 = Question.create!(
   question_type: "type1 ",
   game: game9
 )
+
+# game 10 / expertise
 question37 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -374,6 +387,8 @@ question40 = Question.create!(
   question_type: "type1 ",
   game: game10
 )
+
+# game 11 / expertise
 question41 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -398,6 +413,8 @@ question44 = Question.create!(
   question_type: "type1 ",
   game: game11
 )
+
+# game 12 / expertise
 question45 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
@@ -426,58 +443,54 @@ question48 = Question.create!(
 
 puts "Creating answers..."
 
-
+# game 1 / social skills / bad mood
 answer1 = Answer.create!(
-  content: "Clarity of approach",
-  correct: true,
-  question: question4
-)
-
-
-answer2 = Answer.create!(
-  content: "Identify relevant players",
-  correct: false,
-  question: question4
-)
-
-
-answer3 = Answer.create!(
-  content: "Relationship analysis",
-  correct: false,
-  question: question4
-)
-
-
-answer4 = Answer.create!(
-  content: "Think about strategic options",
-  correct: false,
-  question: question4
-)
-
-answer5 = Answer.create!(
   content: "I invite the person to a coffee.",
   correct: false,
   question: question1
 )
 
-answer6 = Answer.create!(
+answer2 = Answer.create!(
   content: "I punch the person in the face.",
   correct: false,
   question: question1
 )
 
-answer7 = Answer.create!(
+answer3 = Answer.create!(
   content: "I give the person an evil look.",
   correct: false,
   question: question1
 )
 
-answer8 = Answer.create!(
+answer4 = Answer.create!(
   content: "I friendly say hello to the person.",
   correct: true,
   question: question1
 )
 
+# game 1 / social skills / project joy
+answer5 = Answer.create!(
+  content: "Scream and demand.",
+  correct: false,
+  question: question2
+)
+answer6 = Answer.create!(
+  content: "Scream and whine.",
+  correct: false,
+  question: question2
+)
+answer7 = Answer.create!(
+  content: "Explain and ask.",
+  correct: true,
+  question: question2
+)
+answer8 = Answer.create!(
+  content: "Demand and ask.",
+  correct: false,
+  question: question2
+)
+
+# game 1 / social skills / demanding
 answer9 = Answer.create!(
   content: "I tell everyone about how great you have worked yourself, because that's how it was.",
   correct: false,
@@ -501,142 +514,300 @@ answer12 = Answer.create!(
   correct: true,
   question: question3
 )
+
+# game 1 / social skills / lateral
 answer13 = Answer.create!(
-  content: "Scream and demand.",
-  correct: false,
-  question: question2
-)
-answer14 = Answer.create!(
-  content: "Scream and whine.",
-  correct: false,
-  question: question2
-)
-answer15 = Answer.create!(
-  content: "Explain and ask.",
+  content: "Clarity of approach",
   correct: true,
-  question: question2
-)
-answer17 = Answer.create!(
-  content: "Demand and ask.",
-  correct: false,
-  question: question2
-)
-answer18 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: true,
-  question: question5
-)
-answer19 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question5
-)
-answer20 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question6
+  question: question4
 )
 
-answer21 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+answer14 = Answer.create!(
+  content: "Identify relevant players",
+  correct: false,
+  question: question4
+)
+
+answer15 = Answer.create!(
+  content: "Relationship analysis",
+  correct: false,
+  question: question4
+)
+
+answer16 = Answer.create!(
+  content: "Think about strategic options",
+  correct: false,
+  question: question4
+)
+
+# game 4 / self management /
+answer17 = Answer.create!(
+  content: "efficient and effective",
+  correct: false,
+  question: question13
+)
+answer18 = Answer.create!(
+  content: "efficient but not effective",
   correct: true,
-  question: question6
+  question: question13
+)
+answer19 = Answer.create!(
+  content: "effective but not efficient",
+  correct: false,
+  question: question13
+)
+
+answer20 = Answer.create!(
+  content: "neither effective nor efficient",
+  correct: false,
+  question: question13
+)
+
+# game 4 / self management
+answer21 = Answer.create!(
+  content: "10%",
+  correct: false,
+  question: question14
 )
 
 answer22 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "20%",
   correct: false,
-  question: question6
+  question: question14
 )
-
 answer23 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "50%",
   correct: false,
-  question: question7
+  question: question14
 )
 answer24 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question7
+  content: "80%",
+  correct: true,
+  question: question14
 )
+
+# game 4 / self management
 answer25 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
-  correct: true,
-  question: question7
+  correct: false,
+  question: question15
 )
 answer26 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question8
+  question: question15
 )
 answer27 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question8
+  correct: true,
+  question: question15
 )
 answer28 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
-  correct: true,
-  question: question8
+  correct: false,
+  question: question15
 )
+
+# game 4 / self management
 answer29 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question9
+  question: question16
 )
+
 answer30 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question9
+  question: question16
 )
 
-
+answer31 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question16
+)
 answer32 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question6
+  question: question16
 )
 
+# game 7 / Corporate Culture
 answer33 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question6
+  correct: true,
+  question: question25
 )
 answer34 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question6
+  question: question25
 )
 answer35 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
-  correct: true,
-  question: question7
+  correct: false,
+  question: question25
 )
 answer36 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question7
+  correct: true,
+  question: question25
 )
+
+# game 7 / corporate culture
 answer37 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question7
+  question: question26
 )
 answer38 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
-  correct: true,
-  question: question14
+  correct: false,
+  question: question26
 )
 answer39 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question14
+  question: question26
 )
 answer40 = Answer.create!(
   content: " answer 1content content content content content content content content content ",
   correct: false,
-  question: question14
+  question: question26
 )
+
+# game 7 / corporate culture
+answer41 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question27
+)
+answer42 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question27
+)
+answer43 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question27
+)
+answer44 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question27
+)
+
+# game 7 / corporate culture
+answer45 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question28
+)
+answer46 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question28
+)
+answer47 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question28
+)
+answer48 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question28
+)
+
+# game 10 / expertise
+answer49 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question37
+)
+answer50 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question37
+)
+answer51 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question37
+)
+answer52 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question37
+)
+
+# game 10 / expertise
+answer53 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question38
+)
+answer54 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question38
+)
+answer55 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question38
+)
+answer56 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question38
+)
+
+# game 10 / expertise
+answer57 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question39
+)
+answer58 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question39
+)
+answer59 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question39
+)
+answer60 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question39
+)
+
+# game 10 / expertise
+answer61 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question40
+)
+answer62 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question40
+)
+answer63 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question40
+)
+answer64 = Answer.create!(
+  content: " answer 1content content content content content content content content content ",
+  correct: false,
+  question: question40
+)
+
 puts 'Finished!'
 
 
