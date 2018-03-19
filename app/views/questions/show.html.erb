@@ -5,9 +5,6 @@
   </div>
 </div>
 
-<!-- Video embedding - Refactor! Now it shows on all pages -->
-
-
 <!--  Display the feedback - if the question has been answered before -->
 <% if params[:submitted] %>
   <%= render "shared/feedback_answer" %>
@@ -15,8 +12,3 @@
 <% else %>
   <%= render "shared/question_video" %>
 <% end %>
-
-
-
-<!-- https://www.youtube.com/embed/#{UkYsd0Ibxp4}?rel=0
- -->
