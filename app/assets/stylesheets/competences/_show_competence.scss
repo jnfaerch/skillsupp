@@ -1,7 +1,7 @@
 // title settings
 .competence_name {
   padding: 10px;
-  background-color: $blue;
+
   color: white;
   text-align: center;
   font-weight: bold;
@@ -29,8 +29,6 @@
   text-decoration: none;
   text-align: center;
   justify-content: center;
-  background-color: $blue;
-  border-color: $blue;
   margin-left: 30px;
   margin-right: 30px;
   width: 280px;
@@ -52,6 +50,7 @@
 .belonging-img {
   height: 70px;
   margin-top: 10px;
+  color: white;
 }
 
 .text-box {

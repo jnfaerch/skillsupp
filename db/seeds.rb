@@ -5,33 +5,63 @@ Answer.destroy_all
 Question.destroy_all
 Game.destroy_all
 Competence.destroy_all
+Color.destroy_all
 User.destroy_all
+
 u = User.create!(name: "Tanja", email: "test@test.com", password: "123456")
 v = User.create!(name: "Juandi", email: "test2@test.com", password: "123456")
 w = User.create!(name: "Johan", email: "test3@test.com", password: "123456")
 
+puts "Creating colors..."
 
+color1 =  Color.create!(
+  name: "bg-primary",
+  number: 1,
+  icon: "far fa-paper-plane"
+  )
+
+color2 = Color.create!(
+  name: "bg-info",
+  number: 2,
+  icon: "far fa-star"
+  )
+
+color3 = Color.create!(
+  name: "bg-my-black",
+  number: 3,
+  icon: "far fa-heart"
+  )
+
+color4 = Color.create!(
+  name: "bg-warning",
+  number: 4,
+  icon: "fas fa-search"
+  )
 
 puts "Creating competences..."
 
 competence1 =  Competence.create!(
   name: "Social Skills",
-  description: "Human beings are sociable creatures and we have developed many ways to communicate our messages, thoughts and feelings with others. What is said is influenced by both verbal language and the way we use it - tone of voice, volume of speech and the words we choose - as well as by more subtle messages such as body language, gestures and other non-verbal communication methods."
+  description: "Human beings are sociable creatures and we have developed many ways to communicate our messages, thoughts and feelings with others. What is said is influenced by both verbal language and the way we use it - tone of voice, volume of speech and the words we choose - as well as by more subtle messages such as body language, gestures and other non-verbal communication methods.",
+  color: color1
 )
 
 competence2 = Competence.create!(
-   name: "Self Management",
-description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment. Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy."
+  name: "Self Management",
+  description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment. Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy.",
+  color: color2
 )
 
 competence3 = Competence.create!(
-   name: "Corporate Culture",
-  description: "Corporate culture refers to the shared values, attitudes, standards, and beliefs that characterize members of an organization and define its nature. Corporate culture is rooted in an organization's goals, strategies, structure, and approaches to labor, customers, investors, and the greater community. As such, it is an essential component in any business's ultimate success or failure."
+  name: "Corporate Culture",
+  description: "Corporate culture refers to the shared values, attitudes, standards, and beliefs that characterize members of an organization and define its nature. Corporate culture is rooted in an organization's goals, strategies, structure, and approaches to labor, customers, investors, and the greater community. As such, it is an essential component in any business's ultimate success or failure.",
+  color: color3
 )
 
 competence4 = Competence.create!(
   name: "Expertise",
-  description: "Basis of credibility of a person who is perceived to be knowledgeable in an area or topic due to his or her study, training, or experience in the subject matter."
+  description: "Basis of credibility of a person who is perceived to be knowledgeable in an area or topic due to his or her study, training, or experience in the subject matter.",
+  color: color4
 )
 
 

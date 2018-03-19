@@ -1,4 +1,4 @@
-<div class="competence_name">
+<div class="competence_name <%= @competence.color.name %>">
   <h3><%= @competence.name %></h3>
 </div>
 
@@ -12,10 +12,10 @@
     <div class="carousel-inner row">
       <% @competence.games.each.with_index do |game, i| %>
         <div class="carousel-item <%= 'active' if i == 1 %>">
-          <div class="card card-competence col-12">
+          <div class="card card-competence <%= @competence.color.name %> col-12">
             <div class="text-box">
               <h3><%= link_to game.name, question_path(game.questions.first) %></h3>
-              <%= image_tag(@competence.image_name, class: "img-fluid belonging-img") %>
+              <i class="<%= @competence.color.icon %> fa-9x img-fluid belonging-img"></i>
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
 
   <!-- random game choose for the user -->
   <div>
-    <%= link_to "Choose a game for me", question_path(@competence.games.sample.questions.first), class: "btn btn-lg btn-warning btn-block button-random fixed-bottom btn-position" %>
+    <%= link_to "Choose a game for me", question_path(@competence.games.sample.questions.first), class: "btn btn-lg btn-danger btn-block button-random fixed-bottom btn-position" %>
   </div>
 </div>
 
