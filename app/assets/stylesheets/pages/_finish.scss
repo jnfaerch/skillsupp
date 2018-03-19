@@ -11,7 +11,7 @@
 }
 
 .div-bottom-competences {
-  // bottom: -8px;
+  margin-bottom: -18px;
 }
 
 .logo-placement {
@@ -20,4 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.goodbye-text-padding {
+  padding: 0 10px 0 10px;
 }
