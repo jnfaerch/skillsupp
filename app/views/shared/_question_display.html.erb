@@ -5,7 +5,9 @@
     <ul style="list-style-type: none">
         <%= hidden_field_tag(:question_id, @question.id) %>
         <%= hidden_field_tag(:user_answer_id, @user_answer.id) %>
-        <%= hidden_field_tag(:correct_answer_id, @correct_answer.id) %>
+        <% if @correct_answer.present? %>
+          <%= hidden_field_tag(:correct_answer_id, @correct_answer.id) %>
+        <% end %>
         <% @question.answers.each do |answer| %>
           <li class="normal_answer">
              <label><%= radio_button_tag(:choosen_answer_id, answer.id)  %>&nbsp;
