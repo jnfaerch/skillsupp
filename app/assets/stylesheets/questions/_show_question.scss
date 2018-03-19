@@ -16,6 +16,11 @@
   // margin-top: 10px;
 }
 
+.question_field form {
+  border: solid 2px $light-gray;
+  height: 150px;
+}
+
 // ul {
   // margin-left: -60px;
 // }
@@ -62,7 +67,6 @@
     // vertical-align:middle;
 // }
 
-
 .game_name_in_question_show {
   position: relative; // Important for position of progress bar
   padding: 10px;
@@ -74,7 +78,7 @@
   width: 100%;
 }
 
-.game_name_in_question_show h2 h5{
+.game_name_in_question_show h3 h5{
   line-height: 1;
   margin-bottom: 0;
 }

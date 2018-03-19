@@ -172,8 +172,9 @@ question4 = Question.create!(
 3. Evaluate which of your fellow players has a lot of influence and why. How much does the person trust / mistrust me?
 And how much is the person convinced of the sense/nonsense of the project?
 4. Consider your strategic planning options and the next steps, e. g. kick-off meeting.",
-  question_type: "type2 ",
-  game: game1
+  question_type: "video",
+  game: game1,
+  video: "UkYsd0Ibxp4"
 )
 
 # game 2 / social skills
