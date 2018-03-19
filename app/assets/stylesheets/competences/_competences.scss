@@ -19,8 +19,17 @@
   opacity: 0.1;
 }
 
-// Below is to set the specified color for each competence
+.image-size-control {
+  width: 70%;
+}
 
+.image-size-100px-logo {
+  width: 100px;
+  height: 100px;
+}
+
+// Below is to set the specified color for each competence
+// No longer in use - Replaced by bg-color
 .social_skills {
   background-color: $brand-primary;
 }
@@ -36,12 +45,4 @@
 .expertise {
   background-color: $brand-warning;
 }
-
-.image-size-control {
-  width: 70%;
-}
-
-.image-size-100px-logo {
-  width: 100px;
-  height: 100px;
-}
+// Above classes not in use
