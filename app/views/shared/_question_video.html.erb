@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-12 col-md-6 offset-md-3">
+    <div class="col-12 col-md-6 offset-md-3 video-padding">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item"
         src="https://www.youtube.com/embed/UkYsd0Ibxp4" allowfullscreen>
@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <div class="top-padding-question-show col-12 col-md-6 offset-md-3">
+    <div class="col-12 col-md-6 offset-md-3 top-pading-question-show">
       <p><%= @question.content %></p>
       <%= form_tag(user_answers_path, :method => "post") do %>
         <ul style="list-style-type: none">
