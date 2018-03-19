@@ -1,0 +1,21 @@
+// input[type=radio] {
+//   display: none;
+// }
+
+label {
+  cursor: pointer;
+}
+
+// input[type=radio] + label:before {
+//   font-family: 'FontAwesome';
+//   content: "\f10c";
+//   display: inline-block;
+//   letter-spacing: 10px;
+//   color: $info;
+//   cursor: pointer;
+// }
+
+// input[type=radio]:checked + label:before {
+//   content: "\f192";
+//   color: $info;
+// }

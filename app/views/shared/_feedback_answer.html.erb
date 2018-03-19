@@ -1,19 +1,19 @@
 <div class="container">
   <div class="top-pading-question-show list-display-feedback"> <!-- Why is the bottom button included in this? -->
-    <p><%= @question.feedback  %></p>
+    <p class="base-text"><%= @question.feedback  %></p>
     <!-- List of all the answers -->
     <ul class="list-group list-group-flush">
       <%= hidden_field_tag(:question_id, @question.id) %>
       <% @question.answers.each do |answer| %>
         <% if answer.correct == true %>
           <li class="list-group-item bg-info d-flex">
-            <h5><i class="fas fa-thumbs-up text-danger"></i>&nbsp;</h5>
-            <h5>&nbsp;-&nbsp;<%= answer.content %></h5>
+            <p class="base-text"><i class="fas fa-thumbs-up text-danger">&nbsp;</i></p>
+            <p class="base-text">&nbsp;-&nbsp;<%= answer.content %></p>
           </li>
         <% else %>
           <li class="list-group-item d-flex">
-            <h5><i class="far fa-thumbs-down"></i>&nbsp;</h5>
-            <h5>&nbsp;-&nbsp;<%= answer.content %></h5>
+            <p class="base-text"><i class="far fa-thumbs-down"></i>&nbsp;</p>
+            <p class="base-text">&nbsp;-&nbsp;<%= answer.content %></p>
           </li>
         <% end %>
       <% end %>
@@ -21,9 +21,11 @@
   </div> <!-- list-display-feedback end -->
 
     <!-- link after the feedback -->
-  <% if @question == @game.questions.last %>
-    <%= link_to "Finish Game!", finish_game_path, class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
-  <% else %>
-    <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-lg btn-primary fixed-bottom btn-answer-block" %>
-  <% end %> <!-- Link end -->
+  <div class="fixed-bottom bg-white">
+    <% if @question == @game.questions.last %>
+      <%= link_to "Finish Game!", finish_game_path, class: "btn btn-lg btn-primary btn-answer-block" %>
+    <% else %>
+      <%= link_to "Next question!", question_path(@next_question.id), class: "btn btn-lg btn-primary btn-answer-block" %>
+    <% end %> <!-- Link end -->
+  </div>
 </div> <!-- Container end -->
