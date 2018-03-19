@@ -1,9 +1,13 @@
 <div class="container">
   <div class="top-pading-question-show list-display-question">
     <p class="base-text"><%= @question.content %></p>
-    <%= form_tag(user_answers_path, :method => "post") do %>
+    <%= form_tag(user_answer_path, :method => "patch") do %>
       <ul class="list-group list-group-flush">
         <%= hidden_field_tag(:question_id, @question.id) %>
+        <%= hidden_field_tag(:user_answer_id, @user_answer.id) %>
+        <% if @correct_answer.present? %>
+          <%= hidden_field_tag(:correct_answer_id, @correct_answer.id) %>
+        <% end %>
         <% @question.answers.each do |answer| %>
           <li class="list-group-item d-flex">
             <label class="base-text"><%= radio_button_tag(:choosen_answer_id, answer.id) %>&nbsp;
