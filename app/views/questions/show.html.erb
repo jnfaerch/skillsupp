@@ -1,14 +1,17 @@
 <div class="game_name_in_question_show">
   <h2><%= @game.name %></h2>
+  <div class="game-progress-position progress mt-auto" id="question-progress-pages">
+    <div id="questionBar" class="progress-bar bg-danger" role="progressbar" aria-valuenow="<%= (@game.questions.all.index{ |item| item.id == @question[:id] } + 1) * 100 / @game.questions.all.count * 1 %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+  </div>
 </div>
 
-<!-- Video embedding -->
-<iframe
-  width="100%" height="210"
-  src="https://www.youtube.com/embed/UkYsd0Ibxp4?rel=0"
-  frameborder="0" allowfullscreen
-  style="border: solid 1px white">
-</iframe>
+<!-- Video embedding - Refactor! Now it shows on all pages -->
+# <iframe
+#   width="100%" height="210"
+#   src="https://www.youtube.com/embed/UkYsd0Ibxp4?rel=0"
+#   frameborder="0" allowfullscreen
+#   style="border: solid 1px white">
+# </iframe>
 
 <!--  Display the feedback - if the question has been answered before -->
 <% if params[:submitted] %>
