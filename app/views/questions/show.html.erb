@@ -9,6 +9,8 @@
 <% if params[:submitted] %>
   <%= render "shared/feedback_answer" %>
  <!-- Display the questions - if the question has never been answered before -->
+<% elsif @question.type == "video" %>
+  <%= render "shared/question_video" %>
 <% else %>
-  <%= render "shared/question_openfield" %>
+  <%= render "shared/question_display" %>
 <% end %>
