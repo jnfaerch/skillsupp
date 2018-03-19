@@ -1,8 +1,11 @@
 <div class="top-pading-question-show list-display-question">
   <p><%= @question.content %></p>
-  <%= form_tag(user_answers_path, :method => "post") do %>
+
+  <%= form_tag(user_answer_path, :method => "patch") do %>
     <ul style="list-style-type: none">
         <%= hidden_field_tag(:question_id, @question.id) %>
+        <%= hidden_field_tag(:user_answer_id, @user_answer.id) %>
+        <%= hidden_field_tag(:correct_answer_id, @correct_answer.id) %>
         <% @question.answers.each do |answer| %>
           <li class="normal_answer">
              <label><%= radio_button_tag(:choosen_answer_id, answer.id)  %>&nbsp;
