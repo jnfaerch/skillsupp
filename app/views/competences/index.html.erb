@@ -13,14 +13,16 @@
           <div class="progress mt-auto">
             <div id="goalBar" class="progress-bar bg-primary" role="progressbar" aria-valuenow="<%= @user_correct_answers * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
             <div id="goalBarWrong" class="progress-bar bg-danger" role="progressbar" aria-valuenow="<%= @user_wrong_answers * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-            <!-- <div class="progress-bar bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div> -->
           </div>
         </div>
         <div class="col-6 d-flex flex-column">
-          <p class="d-block d-md-none">Achievements today: <strong><span id="achievementTextMobile"></span></strong></p>
-          <h3 class="d-none d-md-block">Achievements today: <strong><span id="achievementText"></span></strong></h3>
+          <p class="d-block d-md-none">Achieved today: <strong><span id="achievementTextMobile"></span></strong></p>
+          <h3 class="d-none d-md-block">Achieved today: <strong><span id="achievementText"></span></strong></h3>
           <div class="progress mt-auto">
-            <div id="achievementBar" class="progress-bar bg-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            <div id="achievementBar" class="progress-bar bg-primary" role="progressbar" aria-valuenow="<%= @correct_daily_answer_pct %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+            </div>
+
+            <div id="achievementBarWrong" class="progress-bar bg-danger" role="progressbar" aria-valuenow="<%= @wrong_daily_answer_pct %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
           </div>
         </div>
       </div>
@@ -29,7 +31,7 @@
 
   <!-- list os competences -->
   <div class="row margin-title">
-    <% @competences.each.with_index do |competence, index| %>
+    <% @competences.each do |competence| %>
       <div class="col-6 text-center">
         <div class="card text-white mb-3 competence-body-link
           <%= competence.color.name %>"> <!-- Card with background color set according to class -->
@@ -39,7 +41,6 @@
             <div class="mt-auto">
               <i class="<%= competence.color.icon %> fa-9x img-fluid"></i>
             </div>
-            <!-- <div class="mt-auto"><%#= image_tag(competence.image_name, class: "img-fluid image-size-control") %></div> -->
           </div>
           <%= link_to "", competence_path(competence), class: "competence-link" %>
         </div> <!-- Card end -->
