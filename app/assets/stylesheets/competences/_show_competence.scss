@@ -1,3 +1,8 @@
+.games-list {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
 // title settings
 .competence_name {
   padding: 10px;
@@ -32,8 +37,8 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  width: 280px;
-  height: 160px;
+  width: 270px;
+  height: 200px;
   // padding: 30px;
   word-wrap: normal;
   border-radius: 20px;
@@ -71,6 +76,8 @@
 #carouselExampleControls {
   display: flex;
   justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .carousel-inner,.row {
@@ -79,20 +86,14 @@
 }
 
 .carousel-control-prev, .carousel-control-next {
-  top: 0;
-  bottom: 0;
   color: white;
   opacity: 0.4;
   margin: -15px;
+  top: 15px;
+  bottom: 15px;
 }
 
-.carousel-control-next-icon {
-  display: inline-block;
-  width: 36px;
-  height: 50px;
-}
-
-.carousel-control-prev-icon {
+.carousel-control-prev-icon, .carousel-control-next-icon {
   display: inline-block;
   width: 36px;
   height: 50px;
