@@ -93,7 +93,7 @@ game4 = Game.create!(
 )
 
 game5 = Game.create!(
-  name: "Persuasion",
+  name: "Creativity",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
   competence: competence2
 )
@@ -267,7 +267,8 @@ question17 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
-  game: game5
+  game: game5,
+  video: "DMpdPrm6Ul4"
 )
 question18 = Question.create!(
   content: " question 1content content content content content content content content content ",
@@ -320,7 +321,8 @@ question25 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
-  game: game7
+  game: game7,
+  video: "jS-4-dsblek"
 )
 question26 = Question.create!(
   content: " question 1content content content content content content content content content ",
