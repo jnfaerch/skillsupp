@@ -41,8 +41,8 @@
   </div> <!-- end of games list -->
 
   <!-- random game choose for the user -->
-  <div>
-    <%= link_to "Choose a game for me", question_path(@competence.games.sample.questions.first), class: "btn btn-lg btn-danger btn-block button-random fixed-bottom btn-position" %>
+  <div class="fixed-bottom">
+    <%= link_to "Choose a game for me", question_path(@competence.games.sample.questions.first), class: "btn btn-lg btn-danger btn-block button-random btn-position" %>
   </div>
 
 </div> <!-- end of container -->
