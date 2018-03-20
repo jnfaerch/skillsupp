@@ -1,5 +1,5 @@
 // function for animated progress bars
-$(function animatedquestionprogress() {
+$(function animatedQuestionProgress() {
   if ($("#question-progress-pages").length > 0){
     var current_progress = 0;
     var interval = setInterval(function() {

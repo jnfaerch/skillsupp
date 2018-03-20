@@ -1,5 +1,5 @@
 // function for animated progress bars
-$(function animatedtotalprogress() {
+$(function animatedTotalProgress() {
   if ($("#competenceProgressBarPage").length > 0){
     var current_progress = 0;
     var current_progress_wrong = 0;
@@ -23,7 +23,7 @@ $(function animatedtotalprogress() {
   }
 });
 
-$(function animateddailyprogress() {
+$(function animatedDailyProgress() {
   if ($("#competenceProgressBarPage").length > 0){
     var current_progress = 0;
     var interval = setInterval(function() {
