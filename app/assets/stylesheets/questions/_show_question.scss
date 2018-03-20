@@ -1,19 +1,11 @@
 .list-display-feedback {
-  // position: relative;
-  max-height: 70vh;
   overflow: auto;
   padding: 0.75rem 1.25rem;
-  // list-style-type: none;
-  // margin-top: 10px;
-
 }
+
 .list-display-question {
-  // position: relative;
-  max-height: 70vh;
   overflow: auto;
   padding: 0.75rem 1.25rem;
-  // list-style-type: none;
-  // margin-top: 10px;
 }
 
 .question_field form {
@@ -21,33 +13,16 @@
   height: 150px;
 }
 
-// ul {
-  // margin-left: -60px;
-// }
-
-// .feedback-correct-answer {
-//     background: #68C5C1;
-//     padding: 11px 4px;
-//     // border: 2px solid transparent;
-//     border-radius: 0.25rem;
-//     margin-left: 18px;
-//     color: white;
-// }
-
-// .normal_answer {
-//     padding: 0.75rem 1.25rem;
-//     margin: 0;
-// }
-
+// Button has to be styled since it's inside the form-div
 .btn-answer-block {
     color: white;
-    bottom: 0px;
-    margin: 3.2%;
+    margin: 5px 3% 10px 3%;
     width: 94%;
 }
 
 .top-pading-question-show {
   padding-top: 20px;
+  padding-bottom: 200px; // This is important in order to clear the text from the sticky button
 }
 
 .video-padding {
@@ -55,22 +30,9 @@
   padding-right: 0px;
 }
 
-// input[type="radio"] {
-    // display:none;
-// }
-
-// input[type="radio"]  {
-    // display:inline-block;
-    // width:25px;
-    // height:25px;
-    // margin:1px 4px ;
-    // vertical-align:middle;
-// }
-
 .game_name_in_question_show {
   position: relative; // Important for position of progress bar
   padding: 10px;
-  // background-color: $blue; // Bootstrap class used instead
   color: white;
   text-align: center;
   font-weight: bold;

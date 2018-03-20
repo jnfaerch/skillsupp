@@ -29,7 +29,7 @@
 
   <!-- list os competences -->
   <div class="row margin-title">
-    <% @competences.each.with_index do |competence, index| %>
+    <% @competences.each do |competence| %>
       <div class="col-6 text-center">
         <div class="card text-white mb-3 competence-body-link
           <%= competence.color.name %>"> <!-- Card with background color set according to class -->
