@@ -1,6 +1,6 @@
 .list-display-feedback {
   // position: relative;
-  max-height: 70vh;
+  // max-height: 70vh;
   overflow: auto;
   padding: 0.75rem 1.25rem;
   // list-style-type: none;
@@ -9,7 +9,7 @@
 }
 .list-display-question {
   // position: relative;
-  max-height: 70vh;
+  // max-height: 70vh;
   overflow: auto;
   padding: 0.75rem 1.25rem;
   // list-style-type: none;
@@ -19,6 +19,10 @@
 .question_field form {
   border: solid 2px $light-gray;
   height: 150px;
+}
+
+.ytp-cued-thumbnail-overlay-image {
+  padding-top: -200px;
 }
 
 // ul {
@@ -48,6 +52,7 @@
 
 .top-pading-question-show {
   padding-top: 20px;
+  padding-bottom: 200px;
 }
 
 .video-padding {
