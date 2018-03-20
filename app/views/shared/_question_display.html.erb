@@ -7,8 +7,9 @@
         <%= f.input :question_id, :as => :hidden %>
         <%= f.input :chosen_answer_id, as: :radio_buttons, collection: answer_collection_for_question(@question), label: false, item_wrapper_tag: :li, item_wrapper_class: "list-group-item d-flex base-text" %>
       </ul>
+
        <div class="fixed-bottom bg-white">
-        <%= submit_tag("Check my answer!", class: "btn btn-lg btn-danger btn-answer-block") %>
+        <%= f.button :submit, "Check my answer!", class: "btn btn-lg btn-danger btn-answer-block" %>
        </div>
     <% end %>
   </div>
