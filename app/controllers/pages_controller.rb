@@ -30,4 +30,8 @@ class PagesController < ApplicationController
     @competences = Competence.all
   end
 
+  def admin
+
+  end
+
 end
