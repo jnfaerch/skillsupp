@@ -8,7 +8,7 @@
   </div>
 
   <!-- list of games -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
     <div class="carousel-inner row">
       <% @competence.games.each.with_index do |game, i| %>
         <div class="carousel-item <%= 'active' if i == 1 %>">
