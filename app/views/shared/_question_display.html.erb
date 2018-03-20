@@ -1,24 +1,19 @@
 <div class="container">
   <div class="top-pading-question-show list-display-question">
     <p class="base-text"><%= @question.content %></p>
-    <%= form_tag(user_answer_path, :method => "patch") do %>
+
+    <%= simple_form_for @user_answer do |f| %>
       <ul class="list-group list-group-flush">
-        <%= hidden_field_tag(:question_id, @question.id) %>
-        <%= hidden_field_tag(:user_answer_id, @user_answer.id) %>
-        <% if @correct_answer.present? %>
-          <%= hidden_field_tag(:correct_answer_id, @correct_answer.id) %>
-        <% end %>
-        <% @question.answers.each do |answer| %>
-          <li class="list-group-item d-flex">
-            <label class="base-text"><%= radio_button_tag(:choosen_answer_id, answer.id) %>&nbsp;
-            <%= answer.content %></label>
-          </li>
-        <% end %>
+        <%= f.input :question_id, :as => :hidden %>
+        <%= f.input :chosen_answer_id, as: :radio_buttons, collection: answer_collection_for_question(@question), label: false, item_wrapper_tag: :li, item_wrapper_class: "list-group-item d-flex base-text" %>
       </ul>
+
        <div class="fixed-bottom bg-white">
-        <%= submit_tag("Check my answer!", class: "btn btn-lg btn-danger btn-answer-block") %>
+        <%= f.button :submit, "Check my answer!", class: "btn btn-lg btn-danger btn-answer-block" %>
        </div>
     <% end %>
   </div>
 
 </div> <!-- Container end -->
+
+

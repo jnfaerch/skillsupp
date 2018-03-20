@@ -6,6 +6,7 @@
 </div>
 
 <!--  Display the feedback - if the question has been answered before -->
+
 <% if params[:submitted] %>
   <%= render "shared/feedback_answer" %>
 
@@ -15,3 +16,4 @@
 <% else %>
   <%= render "shared/question_display" %>
 <% end %>
+
