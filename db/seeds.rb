@@ -17,7 +17,7 @@ puts "Creating colors..."
 color1 =  Color.create!(
   name: "bg-primary",
   number: 1,
-  icon: "far fa-paper-plane"
+  icon: "far fa-heart"
   )
 
 color2 = Color.create!(
@@ -29,7 +29,7 @@ color2 = Color.create!(
 color3 = Color.create!(
   name: "bg-my-black",
   number: 3,
-  icon: "far fa-heart"
+  icon: "far fa-paper-plane"
   )
 
 color4 = Color.create!(
