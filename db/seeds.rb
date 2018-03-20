@@ -134,7 +134,7 @@ game11 = Game.create!(
 )
 
 game12 = Game.create!(
-  name: "Projectmanagement",
+  name: "Project Management",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
   competence: competence4
 )
