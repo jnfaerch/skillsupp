@@ -13,9 +13,9 @@ $(function animatedTotalProgress() {
       .css("width", current_progress_wrong + "%")
       .attr("aria-valuenow", current_progress_wrong);
       $("#goalText")
-      .text(current_progress * 1 + current_progress_wrong * 1 + "%");
+      .html("<br>" + (current_progress * 1 + current_progress_wrong * 1) + "%");
       $("#goalTextMobile")
-      .text(current_progress * 1 + current_progress_wrong * 1 + "%");
+      .html("<br>" + (current_progress * 1 + current_progress_wrong * 1) + "%");
       if (current_progress >= 100)
 
     clearInterval(interval);
@@ -25,17 +25,22 @@ $(function animatedTotalProgress() {
 
 $(function animatedDailyProgress() {
   if ($("#competenceProgressBarPage").length > 0){
-    var current_progress = 0;
+    var daily_progress = 0;
+    var daily_progress_wrong = 0;
     var interval = setInterval(function() {
-      current_progress = document.getElementById('achievementBar').getAttribute('aria-valuenow');
+      daily_progress = document.getElementById('achievementBar').getAttribute('aria-valuenow');
+      daily_progress_wrong = document.getElementById('achievementBarWrong').getAttribute('aria-valuenow');
       $("#achievementBar")
-      .css("width", current_progress + "%")
-      .attr("aria-valuenow", current_progress);
+      .css("width", daily_progress + "%")
+      .attr("aria-valuenow", daily_progress);
+      $("#achievementBarWrong")
+      .css("width", daily_progress_wrong + "%")
+      .attr("aria-valuenow", daily_progress_wrong);
       $("#achievementText")
-      .text(current_progress + "%");
+      .html("<br>" + "<i class='far fa-check-circle text-primary'></i>" + " " + daily_progress + "%" + " " + "<i class='far fa-times-circle text-danger'></i>" + " " + daily_progress_wrong + "%");
       $("#achievementTextMobile")
-      .text(current_progress + "%");
-      if (current_progress >= 100)
+      .html("<br>" + "<i class='far fa-check-circle text-primary'></i>" + " " + daily_progress + "%" + " " + "<i class='far fa-times-circle text-danger'></i>" + " " + daily_progress_wrong + "%");
+      if (daily_progress * 1 + daily_progress_wrong * 1 >= 100)
 
     clearInterval(interval);
     }, 1000);
