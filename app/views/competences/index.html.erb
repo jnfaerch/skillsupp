@@ -1,15 +1,15 @@
 <div class="container" id="competenceProgressBarPage">
   <div class="d-flex flex-column justify-content-center"> <!-- container for logo and header -->
     <div class="d-flex justify-content-center margin-button">
-      <%= image_tag("logo_150.png", class: "d-block d-md-none image-size-100px-logo") %>
-      <%= image_tag("logo_300.png", class: "d-none d-md-block") %>
+      <%= image_tag("#{@user.photo}_150.png", class: "d-block d-md-none image-size-100px-logo rounded-circle") %>
+      <%= image_tag("#{@user.photo}_300.png", class: "d-none d-md-block image-size-300px-logo rounded-circle") %>
     </div>
     <div class="text-center">
       <h4>Hello <%= current_user.name %>!</h4>
       <div class="row">
         <div class="col-6 d-flex flex-column">
-          <p class="d-block d-md-none">Your Goals: <strong><span id="goalTextMobile"></span></strong></p>
-          <h3 class="d-none d-md-block">Your Goals: <strong><span id="goalText"></span></strong></h3>
+          <p class="d-block d-md-none">Overall Goals: <strong><span id="goalTextMobile"></span></strong></p>
+          <h3 class="d-none d-md-block">Overall Goals: <strong><span id="goalText"></span></strong></h3>
           <div class="progress mt-auto">
             <div id="goalBar" class="progress-bar bg-primary" role="progressbar" aria-valuenow="<%= @user_correct_answers * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
             <div id="goalBarWrong" class="progress-bar bg-danger" role="progressbar" aria-valuenow="<%= @user_wrong_answers * 100 / Question.all.count %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>

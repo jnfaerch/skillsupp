@@ -3,8 +3,8 @@
 <input type="hidden">
 <% end %>
 
-<div class="container-fluid">
-  <!-- Felxbox used to place logo and other elements over the design bars -->
+<div class="container-fluid container-0padding">
+  <!-- Flexbox used to place logo and other elements over the design bars -->
   <div class="position-absolute logo-placement d-flex flex-column justify-content-center"> <!-- container for logo and header -->
     <div class="d-flex justify-content-center">
       <%= image_tag("logo_150.png", class: "d-block d-md-none") %>
@@ -25,63 +25,18 @@
       <% end %>
     </div>
   </div> <!-- logo and header end -->
-  <div class="row">
-    <div class="col-12 col-color-bar bg-my-black">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-dark">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-success">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-info">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-my-md-info">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-primary">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-my-bright-primary">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-warning">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-my-bright-warning">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-danger">
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-my-bright-danger">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-color-bar bg-light">
-    </div>
-  </div>
+  <div class="row col-color-bar bg-my-black"></div>
+  <div class="row col-color-bar bg-dark"></div>
+  <div class="row col-color-bar bg-success"></div>
+  <div class="row col-color-bar bg-info"></div>
+  <div class="row col-color-bar bg-my-md-info"></div>
+  <div class="row col-color-bar bg-primary"></div>
+  <div class="row col-color-bar bg-my-bright-primary"></div>
+  <div class="row col-color-bar bg-warning"></div>
+  <div class="row col-color-bar bg-my-bright-warning"></div>
+  <div class="row col-color-bar bg-danger"></div>
+  <div class="row col-color-bar-last bg-my-bright-danger"></div>
+  <!-- <div class="row col-color-bar bg-light"></div> -->
   <% if current_user %>
     <a class="competence-link" href="/competences" ></a>
   <% end %>

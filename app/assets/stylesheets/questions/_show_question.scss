@@ -1,11 +1,25 @@
-.list-display-feedback {
-  overflow: auto;
-  padding: 0.75rem 1.25rem;
-}
-
 .list-display-question {
   overflow: auto;
-  padding: 0.75rem 1.25rem;
+  padding: 0.4rem;
+}
+
+.list-display-question ul {
+  list-style-position: outside;
+}
+
+.list-display-feedback {
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+.list-display-feedback .base-text {
+    margin-bottom: 1rem;
+  }
+
+
+.list-display-feedback .list-group-item {
+  color: white;
+  border-radius: 0.3rem;
 }
 
 .question_field form {
@@ -15,14 +29,14 @@
 
 // Button has to be styled since it's inside the form-div
 .btn-answer-block {
-    color: white;
-    margin: 5px 3% 10px 3%;
-    width: 94%;
+  color: white;
+  margin: 5px 3% 10px 3%;
+  width: 94%;
 }
 
 .top-pading-question-show {
   padding-top: 20px;
-  padding-bottom: 200px; // This is important in order to clear the text from the sticky button
+  padding-bottom: 100px; // This is important in order to clear the text from the sticky button
 }
 
 .video-padding {

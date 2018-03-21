@@ -4,24 +4,74 @@
 }
 
 .div-text {
- height: calc(70vh - 70px);
+ height: 100%;
  background: $danger;
  color: white;
- text-align: center
+ text-align: center;
+ padding-top: 80px;
+ padding-bottom: 125px;
+}
+
+.finish, .container-fluid, .container-0padding {
+  height: 100vh;
 }
 
 .div-bottom-competences {
   margin-bottom: -18px;
+  max-height: 120px;
+  max-width: 425px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .logo-placement {
-  padding: 15px;
-  width:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   padding: 15px;
+   width:100%;
 }
 
 .goodbye-text-padding {
-  padding: 0 10px 0 10px;
+  padding: 15px 15px;
+}
+
+.card-no-br {
+  border-radius: 0;
+}
+
+.card-no-br:first-child {
+  border-radius: 2px 0 0 0;
+}
+
+.card-no-br:last-child {
+  border-radius: 0 2px 0 0;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+
+  .goodbye-text-padding {
+    padding: 65px 15px;
+    h2 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px) {
+
+  .goodbye-text-padding {
+    padding: 90px 15px;
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 50px;
+    }
+  }
 }
