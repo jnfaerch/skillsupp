@@ -8,10 +8,10 @@ Competence.destroy_all
 Color.destroy_all
 User.destroy_all
 
-u = User.create!(name: "Tanja", email: "tanja@lewagon.com", password: "123456", photo: "tanja_150.png")
-v = User.create!(name: "Juandi", email: "juandi@lewagon.com", password: "123456", photo: "juandi_150.png")
-w = User.create!(name: "Johan", email: "johan@lewagon.com", password: "123456", photo: "johan_150.png")
-a = User.create!(name: "Admin", email: "admin@lewagon.com", password: "123456", role: "admin")
+u = User.create!(name: "Tanja", email: "tanja@lewagon.com", password: "123456")
+v = User.create!(name: "Juandi", email: "juandi@lewagon.com", password: "123456")
+w = User.create!(name: "Johan", email: "johan@lewagon.com", password: "123456")
+a = User.create!(name: "Admin", email: "admin@lewagon.com", password: "123456")
 
 puts "Creating colors..."
 
