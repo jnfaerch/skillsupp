@@ -4,7 +4,7 @@ $(function animatedTotalProgress() {
     var current_progress = 0;
     var current_progress_wrong = 0;
     var interval = setInterval(function() {
-      current_progress = document.getElementById('goalBar').getAttribute('aria-valuenow')
+      current_progress = document.getElementById('goalBar').getAttribute('aria-valuenow');
       current_progress_wrong = document.getElementById('goalBarWrong').getAttribute('aria-valuenow') * 1;
       $("#goalBar")
       .css("width", current_progress + "%")
