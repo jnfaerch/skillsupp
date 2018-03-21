@@ -4,12 +4,14 @@
 </div>
 
 <div class="div-text">
-  <div class="fixed-bottom div-bottom-competences"> <!-- fix the competences to the bottom -->
     <div class="goodbye-text-padding">
       <h2>Congratulations<br><%= current_user.name %>!</h2>
-      <p><i class="fas fa-arrow-circle-down"></i>You finished all the games in this topic!</p>
-      <p>Wanna keep on playing? Choose your next skill!</p>
+      <p>You achieved 80/100 points in this game!</p>
+      <br><p>Wanna keep on playing?<br><i class="fas fa-arrow-circle-down"></i><b> Choose your next skill! <b><i class="fas fa-arrow-circle-down"></i></p>
     </div>
+</div>
+
+    <div class="fixed-bottom div-bottom-competences"> <!-- fix the competences to the bottom -->
     <div class="d-flex text-center justify-content-center"> <!-- give size to the competences line -->
       <% @competences.each do |competence| %>
         <div class="card text-white <%= competence.image_name %> mb-3 competence-body-link d-flex flex-column"> <!-- Card -->
@@ -23,5 +25,3 @@
       <% end %> <!-- Loop end -->
     </div> <!-- flex -->
   </div> <!-- fixed bottom -->
-</div> <!-- div text -->
-
