@@ -6,7 +6,7 @@
       <%= hidden_field_tag(:question_id, @question.id) %>
       <% @question.answers.each do |answer| %>
         <% if answer.correct == true %>
-          <li class="list-group-item bg-info d-flex";>
+          <li class="list-group-item bg-info d-flex">
             <p class="base-text"><i class="fas fa-thumbs-up text-danger">&nbsp;</i></p>
             <p class="base-text">&nbsp;-&nbsp;<%= answer.content %></p>
           </li>
