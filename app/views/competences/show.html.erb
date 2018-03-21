@@ -14,7 +14,7 @@
           <div class="carousel-item <%= 'active' if i == 1 %>">
             <div class="card card-competence <%= @competence.color.name %> col-12">
               <div class="text-box">
-                  <h3><%= link_to game.name, question_path(game.questions.first) %></h3>
+                <h3><%= link_to game.name, question_path(game.questions.first) %></h3>
                 <i class="<%= @competence.color.icon %> fa-9x img-fluid belonging-img"></i>
               </div>
             </div>
@@ -42,9 +42,6 @@
 
   <!-- random game choose for the user -->
   <div class="fixed-bottom bg-white">
-
     <%= link_to "Choose a game for me", question_path(@competence.games_with_questions.sample.questions.first), class: "btn btn-lg btn-danger btn-block button-random btn-position" %>
-
   </div>
-
 </div> <!-- end of container -->
