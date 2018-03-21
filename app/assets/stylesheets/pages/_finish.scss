@@ -15,13 +15,25 @@
 }
 
 .logo-placement {
-  padding: 15px;
+  padding: 45px;
   width:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .goodbye-text-padding {
   padding: 0 10px 0 10px;
+}
+
+.card-no-br {
+  border-radius: 0;
+}
+
+.card-no-br:first-child {
+  border-radius: 20px 0 0 0;
+}
+
+.card-no-br:last-child {
+  border-radius: 0 20px 0 0;
 }
