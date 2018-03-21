@@ -4,29 +4,26 @@
 }
 
 .div-text {
- height: calc(70vh - 70px);
+ height: 100%;
  background: $danger;
  color: white;
  text-align: center;
  padding-top: 80px;
+ padding-bottom: 125px;
 }
 
 .div-bottom-competences {
   margin-bottom: -18px;
   max-height: 120px;
   max-width: 425px;
-  position: fixed;
   margin-top: 0px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .logo-placement {
-  padding: 45px;
-  width:100%;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+   padding: 15px;
+   width:100%;
 }
 
 .goodbye-text-padding {
@@ -38,9 +35,9 @@
 }
 
 .card-no-br:first-child {
-  border-radius: 20px 0 0 0;
+  border-radius: 2px 0 0 0;
 }
 
 .card-no-br:last-child {
-  border-radius: 0 20px 0 0;
+  border-radius: 0 2px 0 0;
 }
