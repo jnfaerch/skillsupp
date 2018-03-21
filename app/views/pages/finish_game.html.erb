@@ -7,7 +7,7 @@
 <div class="div-text">
   <div class="goodbye-text-padding">
     <h2>Congratulations<br><%= current_user.name %>!</h2>
-    <p>You achieved <i class='far fa-check-circle text-primary'></i> <span id="JS-correct-finish-page"></span> of <span id="JS-total-finish-page"></span> in this game!</p>
+    <p>You achieved <strong><%= @questions_correct %> <i class='far fa-check-circle text-primary'></i> of <%= @question_count %></strong> in this game!</p>
     <br><p>Wanna keep on playing?<br><i class="fas fa-arrow-circle-down"></i><b> Choose your next skill! <b><i class="fas fa-arrow-circle-down"></i></p>
   </div>
 </div>
