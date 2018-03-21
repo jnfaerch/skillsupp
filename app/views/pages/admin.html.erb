@@ -7,18 +7,38 @@
     </div>
   <div> <!-- Container end -->
 <% else %>
-  <div class="container-fluid">
+  <div class="container-fluid" id="ProgressBarAdmin">
     <div class="row"> <!-- Links to new and edit -->
-      <div class="col-12">
-        <p class="text-center deny-header"> <%= link_to "Create a new game", new_game_path %></p>
-        <p class="text-center deny-header"> <%= link_to "my games", new_game_path %></p>
+
+      <div class="col-2 col-md-1">
+        <div class="progress mt-auto vertical-progressbar">
+          <div id="goalBarAdmin"
+          class="progress-bar bg-primary"
+          role="progressbar"
+          aria-valuenow="<%= @user_answers * 100 / @question_all %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          </div>
+        </div>
       </div>
+
+      <div class="col-8 col-md-10 text-center">
+        <%= link_to "Create a new game", new_game_path, class: "btn btn-danger deny-header" %>
+        <%= link_to "my games", new_game_path, class: "btn btn-danger text-white deny-header" %>
+      </div>
+
+      <div class="col-2 col-md-1">
+        <div class="progress mt-auto vertical-progressbar">
+          <div id="goalBarAdminAll"
+          class="progress-bar bg-primary"
+          role="progressbar"
+          aria-valuenow="<%= @question_all * 100 / @question_all %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="row"> <!-- Statistics -->
-      <div class="col-12 col-md-6">
 
-      </div>
     </div>
   </div>
 <% end %>
