@@ -8,10 +8,10 @@ Competence.destroy_all
 Color.destroy_all
 User.destroy_all
 
-u = User.create!(name: "Tanja", email: "test@test.com", password: "123456")
-v = User.create!(name: "Juandi", email: "test2@test.com", password: "123456")
-w = User.create!(name: "Johan", email: "test3@test.com", password: "123456")
-a = User.create!(name: "Admin", email: "admin@test.com", password: "123456", role: "admin")
+u = User.create!(name: "Tanja", email: "tanja@lewagon.com", password: "123456")
+v = User.create!(name: "Juandi", email: "juandi@lewagon.com", password: "123456")
+w = User.create!(name: "Johan", email: "johan@lewagon.com", password: "123456")
+a = User.create!(name: "Admin", email: "admin@lewagon.com", password: "123456")
 
 puts "Creating colors..."
 
@@ -93,7 +93,7 @@ game4 = Game.create!(
 )
 
 game5 = Game.create!(
-  name: "Persuasion",
+  name: "Creativity",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
   competence: competence2
 )
@@ -117,13 +117,13 @@ game8 = Game.create!(
 )
 
 game9 = Game.create!(
-  name: "Corruption",
+  name: "Company History",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
   competence: competence3
 )
 
 game10 = Game.create!(
-  name: "Company History",
+  name: "Corruption",
   description: "Majestic Events has been created for you to enjoy the best we have to offer.",
   competence: competence4
 )
@@ -267,7 +267,8 @@ question17 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
-  game: game5
+  game: game5,
+  video: "DMpdPrm6Ul4"
 )
 question18 = Question.create!(
   content: " question 1content content content content content content content content content ",
@@ -320,7 +321,8 @@ question25 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
-  game: game7
+  game: game7,
+  video: "jS-4-dsblek"
 )
 question26 = Question.create!(
   content: " question 1content content content content content content content content content ",
@@ -343,7 +345,7 @@ question28 = Question.create!(
 
 # game 8 / corporate culture
 question29 = Question.create!(
-  content: " question 1content content content content content content content content content ",
+  content: " Indonesia's anti-drug chief announced the use of crocodiles to guard death row prisoners on an isolated island in Indonesia because, contrary to humans, crocodiles cannot be bribed: 'We will place as many crocodiles as we can there. I will search for the most ferocious type of crocodile.'",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game8
@@ -376,7 +378,7 @@ question33 = Question.create!(
   game: game9
 )
 question34 = Question.create!(
-  content: " question 1content content content content content content content content content ",
+  content: "how corrupt are you?",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game9
@@ -396,25 +398,31 @@ question36 = Question.create!(
 
 # game 10 / expertise
 question37 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  content: "Indonesia's anti-drug chief announced the use of crocodiles to guard
+death row prisoners on an isolated island in Indonesia because,
+contrary to humans, crocodiles cannot be bribed: 'We will place as
+many crocodiles as we can there. I will search for the most ferocious
+type of crocodile.'",
+  feedback: "Indonesia's government quickly explained it was a joke, but
+days later the anti-drug chief said he might use tigers and piranha
+fish, too.",
   question_type: "type1 ",
   game: game10
 )
 question38 = Question.create!(
-  content: " question 1content content content content content content content content content ",
+  content: "What is blackmail?",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game10
 )
 question39 = Question.create!(
-  content: " question 1content content content content content content content content content ",
+  content: "What is corruption?",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game10
 )
 question40 = Question.create!(
-  content: " question 1content content content content content content content content content ",
+  content: "What is a conflict of interest?",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game10
@@ -754,88 +762,90 @@ answer48 = Answer.create!(
 
 # game 10 / expertise
 answer49 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
+  content: "True. The proposal is consistent with the strict laws to deal
+with drug traffickers.",
+  correct: true,
   question: question37
 )
 answer50 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "False. Certainly an innovative approach to avoid bribery, but
+animals as guards ... ?!",
   correct: false,
   question: question37
 )
-answer51 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question37
-)
-answer52 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question37
-)
+# answer51 = Answer.create!(
+#   content: " answer 1content content content content content content content content content ",
+#   correct: false,
+#   question: question37
+# )
+# answer52 = Answer.create!(
+#   content: " answer 1content content content content content content content content content ",
+#   correct: false,
+#   question: question37
+# )
 
 # game 10 / expertise
 answer53 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "The unlawful acquisition of money through coercion or threats.",
   correct: false,
   question: question38
 )
 answer54 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
+  content: "A threat to reveal damaging information unless a demand is met.",
+  correct: true,
   question: question38
 )
 answer55 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "When an official conceals illegal money in a black suitcase.",
   correct: false,
   question: question38
 )
 answer56 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "An encrypted letter.",
   correct: false,
   question: question38
 )
 
 # game 10 / expertise
 answer57 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "The unlawful taking of someone's personal property.",
   correct: false,
   question: question39
 )
 answer58 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "The abuse of personal power for personal gain.",
   correct: false,
   question: question39
 )
 answer59 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
+  content: "The abuse of entrusted power for personal gain.",
+  correct: true,
   question: question39
 )
 answer60 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "The ejection of molten lava, rocks and gas into the atmosphere.",
   correct: false,
   question: question39
 )
 
 # game 10 / expertise
 answer61 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
+  content: "When someone has competing interests that influence their duties.",
+  correct: true,
   question: question40
 )
 answer62 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "When someone fights against corruption in their own company.",
   correct: false,
   question: question40
 )
 answer63 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "When an employee reports misconduct and gets fired.",
   correct: false,
   question: question40
 )
 answer64 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "When interest rates from different countries battle.",
   correct: false,
   question: question40
 )
