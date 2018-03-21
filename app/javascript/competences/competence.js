@@ -13,9 +13,9 @@ $(function animatedTotalProgress() {
       .css("width", current_progress_wrong + "%")
       .attr("aria-valuenow", current_progress_wrong);
       $("#goalText")
-      .html("<br>" + (current_progress * 1 + current_progress_wrong * 1) + "%");
+      .html("<br>" + "<i class='far fa-check-circle text-primary'></i>" + " " + current_progress + "%" + " " + "<i class='far fa-times-circle text-danger'></i>" + " " + current_progress_wrong + "%");
       $("#goalTextMobile")
-      .html("<br>" + (current_progress * 1 + current_progress_wrong * 1) + "%");
+      .html("<br>" + "<i class='far fa-check-circle text-primary'></i>" + " " + current_progress + "%" + " " + "<i class='far fa-times-circle text-danger'></i>" + " " + current_progress_wrong + "%");
       if (current_progress >= 100)
 
     clearInterval(interval);
