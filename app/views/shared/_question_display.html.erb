@@ -1,6 +1,6 @@
 <div class="container">
   <div class="top-pading-question-show list-display-question">
-    <p class="base-text"><%= @question.content %></p>
+    <p class="base-text"><%= @question.content.html_safe %></p>
 
     <%= simple_form_for @user_answer do |f| %>
       <ul class="list-group list-group-flush">

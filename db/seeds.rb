@@ -43,19 +43,19 @@ puts "Creating competences..."
 
 competence1 =  Competence.create!(
   name: "Social Skills",
-  description: "Human beings are sociable creatures and we have developed many ways to communicate our messages, thoughts and feelings with others. What is said is influenced by both verbal language and the way we use it - tone of voice, volume of speech and the words we choose - as well as by more subtle messages such as body language, gestures and other non-verbal communication methods.",
+  description: "Human beings are sociable creatures and we have developed many ways to communicate our messages, thoughts and feelings with others.<br><br>What is said is influenced by both verbal language and the way we use it - tone of voice, volume of speech and the words we choose - as well as by more subtle messages such as body language, gestures and other non-verbal communication methods.",
   color: color1
 )
 
 competence2 = Competence.create!(
   name: "Self Management",
-  description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment. Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy.",
+  description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment.<br><br>Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy.",
   color: color2
 )
 
 competence3 = Competence.create!(
   name: "Corporate Culture",
-  description: "Corporate culture refers to the shared values, attitudes, standards, and beliefs that characterize members of an organization and define its nature. Corporate culture is rooted in an organization's goals, strategies, structure, and approaches to labor, customers, investors, and the greater community. As such, it is an essential component in any business's ultimate success or failure.",
+  description: "Corporate culture refers to the shared values, attitudes, standards, and beliefs that characterize members of an organization and define its nature.<br><br>Corporate culture is rooted in an organization's goals, strategies, structure, and approaches to labor, customers, investors, and the greater community. As such, it is an essential component in any business's ultimate success or failure.",
   color: color3
 )
 
@@ -145,7 +145,7 @@ puts "Creating question..."
 # Game 1 / social skills
 question1 = Question.create!(
   content: "You are in a bad mood and the first person you see is the one you hate. How do you react?",
-  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea. You never know when you'll have to work together next time...",
+  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea.<br>You never know when you'll have to work together next time...",
   question_type: "type2 ",
   game: game1
 )
@@ -159,19 +159,19 @@ question2 = Question.create!(
 
 question3 = Question.create!(
   content: "What is the best way to express your joy about a successful project?",
-  feedback: "It is always a good idea to celebrate! Just don't get the idea of flirting drunk with your boss!",
+  feedback: "It is always a good idea to celebrate! <br>Just don't get the idea of flirting drunk with your boss!",
   question_type: "type2 ",
   game: game1
 )
 
 question4 = Question.create!(
   content: "What is the first step to successfully assert your concern with your team members?",
-  feedback: "1. Make yourself aware of what your concern is and why it is important for you, for your organization and other people.
+  feedback: "1. Make yourself aware of what your concern is and why it is important for you, for your organization and other people.<br><br>
 
-2. Identify the relevant players for the request. Consider who of these could potentially be your target or harm it.
+2. Identify the relevant players for the request. Consider who of these could potentially be your target or harm it.<br><br>
 
 3. Evaluate which of your fellow players has a lot of influence and why. How much does the person trust / mistrust me?
-And how much is the person convinced of the sense/nonsense of the project?
+And how much is the person convinced of the sense/nonsense of the project?<br><br>
 4. Consider your strategic planning options and the next steps, e. g. kick-off meeting.",
   question_type: "video",
   game: game1,
@@ -245,7 +245,7 @@ question13 = Question.create!(
 )
 question14 = Question.create!(
   content: "How much buffering time do you have to plan for unforeseen events these days?",
-  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times. This requires flexible time management.",
+  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times.<br>This requires flexible time management.",
   question_type: "type1 ",
   game: game4
 )
@@ -292,7 +292,7 @@ question20 = Question.create!(
 # game 6 / self management
 question21 = Question.create!(
   content: "How much buffering time do you have to plan for unforeseen events these days?",
-  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times. This requires flexible time management.",
+  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times.<br>This requires flexible time management.",
   question_type: "type1 ",
   game: game6
 )
@@ -345,7 +345,7 @@ question28 = Question.create!(
 
 # game 8 / corporate culture
 question29 = Question.create!(
-  content: " Indonesia's anti-drug chief announced the use of crocodiles to guard death row prisoners on an isolated island in Indonesia because, contrary to humans, crocodiles cannot be bribed: 'We will place as many crocodiles as we can there. I will search for the most ferocious type of crocodile.'",
+  content: " Indonesia's anti-drug chief announced the use of crocodiles to guard death row prisoners on an isolated island in Indonesia because, contrary to humans, crocodiles cannot be bribed:<br>'We will place as many crocodiles as we can there. I will search for the most ferocious type of crocodile.'",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game8
@@ -400,7 +400,7 @@ question36 = Question.create!(
 question37 = Question.create!(
   content: "Indonesia's anti-drug chief announced the use of crocodiles to guard
 death row prisoners on an isolated island in Indonesia because,
-contrary to humans, crocodiles cannot be bribed: 'We will place as
+contrary to humans, crocodiles cannot be bribed:<br>'We will place as
 many crocodiles as we can there. I will search for the most ferocious
 type of crocodile.'",
   feedback: "Indonesia's government quickly explained it was a joke, but
