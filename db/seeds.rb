@@ -43,19 +43,19 @@ puts "Creating competences..."
 
 competence1 =  Competence.create!(
   name: "Social Skills",
-  description: "Human beings are sociable creatures and we have developed many ways to communicate our messages, thoughts and feelings with others. What is said is influenced by both verbal language and the way we use it - tone of voice, volume of speech and the words we choose - as well as by more subtle messages such as body language, gestures and other non-verbal communication methods.",
+  description: "Human beings are sociable creatures and we have developed many ways to communicate our messages, thoughts and feelings with others.<br><br>What is said is influenced by both verbal language and the way we use it - tone of voice, volume of speech and the words we choose - as well as by more subtle messages such as body language, gestures and other non-verbal communication methods.",
   color: color1
 )
 
 competence2 = Competence.create!(
   name: "Self Management",
-  description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment. Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy.",
+  description: "Self-management skills are those abilities that allow an employee to feel more productive when doing daily routine regardless of the working environment.<br><br>Well-developed self-management skills will help you efficiently communicate with co-workers, management and customers, make right decisions, plan your working time, and keep your body healthy.",
   color: color2
 )
 
 competence3 = Competence.create!(
   name: "Corporate Culture",
-  description: "Corporate culture refers to the shared values, attitudes, standards, and beliefs that characterize members of an organization and define its nature. Corporate culture is rooted in an organization's goals, strategies, structure, and approaches to labor, customers, investors, and the greater community. As such, it is an essential component in any business's ultimate success or failure.",
+  description: "Corporate culture refers to the shared values, attitudes, standards, and beliefs that characterize members of an organization and define its nature.<br><br>Corporate culture is rooted in an organization's goals, strategies, structure, and approaches to labor, customers, investors, and the greater community. As such, it is an essential component in any business's ultimate success or failure.",
   color: color3
 )
 
@@ -245,7 +245,7 @@ question13 = Question.create!(
 )
 question14 = Question.create!(
   content: "How much buffering time do you have to plan for unforeseen events these days?",
-  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times. This requires flexible time management.",
+  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times.<br>This requires flexible time management.",
   question_type: "type1 ",
   game: game4
 )
@@ -292,7 +292,7 @@ question20 = Question.create!(
 # game 6 / self management
 question21 = Question.create!(
   content: "How much buffering time do you have to plan for unforeseen events these days?",
-  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times. This requires flexible time management.",
+  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times.<br>This requires flexible time management.",
   question_type: "type1 ",
   game: game6
 )
@@ -345,7 +345,7 @@ question28 = Question.create!(
 
 # game 8 / corporate culture
 question29 = Question.create!(
-  content: " Indonesia's anti-drug chief announced the use of crocodiles to guard death row prisoners on an isolated island in Indonesia because, contrary to humans, crocodiles cannot be bribed: 'We will place as many crocodiles as we can there. I will search for the most ferocious type of crocodile.'",
+  content: " Indonesia's anti-drug chief announced the use of crocodiles to guard death row prisoners on an isolated island in Indonesia because, contrary to humans, crocodiles cannot be bribed:<br>'We will place as many crocodiles as we can there. I will search for the most ferocious type of crocodile.'",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game8
@@ -400,7 +400,7 @@ question36 = Question.create!(
 question37 = Question.create!(
   content: "Indonesia's anti-drug chief announced the use of crocodiles to guard
 death row prisoners on an isolated island in Indonesia because,
-contrary to humans, crocodiles cannot be bribed: 'We will place as
+contrary to humans, crocodiles cannot be bribed:<br>'We will place as
 many crocodiles as we can there. I will search for the most ferocious
 type of crocodile.'",
   feedback: "Indonesia's government quickly explained it was a joke, but
