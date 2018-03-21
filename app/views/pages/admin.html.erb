@@ -6,6 +6,14 @@
       </div>
     </div>
   <% else %>
+  <div>
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center deny-header"> <%= link_to "Create a new game", new_game_path %></p>
+        <p class="text-center deny-header"> <%= link_to "my games", new_game_path %></p>
 
-  <% end %>
+      </div>
+    </div>
+  </div>
+    <% end %>
 </div>
