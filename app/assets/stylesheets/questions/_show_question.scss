@@ -13,13 +13,19 @@
 }
 
 .list-display-feedback .base-text {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
 
+.feedback-base-text {
+  font-weight: bolder;
+}
 
 .list-display-feedback .list-group-item {
   color: white;
   border-radius: 0.3rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .question_field form {

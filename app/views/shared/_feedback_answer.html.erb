@@ -1,14 +1,13 @@
 <div class="container">
   <div class="top-pading-question-show list-display-feedback"> <!-- Why is the bottom button included in this? -->
-    <p class="base-text"><%= @question.feedback  %></p>
     <!-- List of all the answers -->
     <ul class="list-group list-group-flush">
       <%= hidden_field_tag(:question_id, @question.id) %>
       <% @question.answers.each do |answer| %>
         <% if answer.correct == true %>
           <li class="list-group-item bg-info d-flex">
-            <p class="base-text"><i class="fas fa-thumbs-up text-danger">&nbsp;</i></p>
-            <p class="base-text">&nbsp;-&nbsp;<%= answer.content %></p>
+            <p class="feedback-base-text base-text"><i class="fas fa-thumbs-up text-danger">&nbsp;</i></p>
+            <p class="feedback-base-text base-text">&nbsp;-&nbsp;<%= answer.content %></p>
           </li>
         <!--  in case we want to show all answers again:
         <% #else %>
@@ -19,6 +18,8 @@
         <% end %>
       <% end %>
     </ul>
+    <p class="base-text"><%= @question.feedback.html_safe %></p>
+
   </div> <!-- list-display-feedback end -->
 
     <!-- link after the feedback -->

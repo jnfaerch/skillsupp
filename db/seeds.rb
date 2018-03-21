@@ -145,7 +145,7 @@ puts "Creating question..."
 # Game 1 / social skills
 question1 = Question.create!(
   content: "You are in a bad mood and the first person you see is the one you hate. How do you react?",
-  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea. You never know when you'll have to work together next time...",
+  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea.<br>You never know when you'll have to work together next time...",
   question_type: "type2 ",
   game: game1
 )
@@ -159,19 +159,19 @@ question2 = Question.create!(
 
 question3 = Question.create!(
   content: "What is the best way to express your joy about a successful project?",
-  feedback: "It is always a good idea to celebrate! Just don't get the idea of flirting drunk with your boss!",
+  feedback: "It is always a good idea to celebrate! <br>Just don't get the idea of flirting drunk with your boss!",
   question_type: "type2 ",
   game: game1
 )
 
 question4 = Question.create!(
   content: "What is the first step to successfully assert your concern with your team members?",
-  feedback: "1. Make yourself aware of what your concern is and why it is important for you, for your organization and other people.
+  feedback: "1. Make yourself aware of what your concern is and why it is important for you, for your organization and other people.<br><br>
 
-2. Identify the relevant players for the request. Consider who of these could potentially be your target or harm it.
+2. Identify the relevant players for the request. Consider who of these could potentially be your target or harm it.<br><br>
 
 3. Evaluate which of your fellow players has a lot of influence and why. How much does the person trust / mistrust me?
-And how much is the person convinced of the sense/nonsense of the project?
+And how much is the person convinced of the sense/nonsense of the project?<br><br>
 4. Consider your strategic planning options and the next steps, e. g. kick-off meeting.",
   question_type: "video",
   game: game1,
