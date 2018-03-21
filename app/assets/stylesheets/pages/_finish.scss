@@ -12,6 +12,10 @@
  padding-bottom: 125px;
 }
 
+.finish, .container-fluid, .container-0padding {
+  height: 100vh;
+}
+
 .div-bottom-competences {
   margin-bottom: -18px;
   max-height: 120px;
@@ -40,4 +44,34 @@
 
 .card-no-br:last-child {
   border-radius: 0 2px 0 0;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+
+  .goodbye-text-padding {
+    padding: 65px 15px;
+    h2 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px) {
+
+  .goodbye-text-padding {
+    padding: 90px 15px;
+    h2 {
+      font-size: 80px;
+    }
+    p {
+      font-size: 50px;
+    }
+  }
 }
