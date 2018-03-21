@@ -10,11 +10,12 @@
             <p class="base-text"><i class="fas fa-thumbs-up text-danger">&nbsp;</i></p>
             <p class="base-text">&nbsp;-&nbsp;<%= answer.content %></p>
           </li>
-        <% else %>
+        <!--  in case we want to show all answers again:
+        <% #else %>
           <li class="list-group-item d-flex">
             <p class="base-text"><i class="far fa-thumbs-down"></i>&nbsp;</p>
             <p class="base-text">&nbsp;-&nbsp;<%= answer.content %></p>
-          </li>
+          </li> -->
         <% end %>
       <% end %>
     </ul>
