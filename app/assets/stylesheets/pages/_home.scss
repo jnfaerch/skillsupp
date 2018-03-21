@@ -1,6 +1,19 @@
 // Specific CSS for home-page
 .col-color-bar {
+  margin-left: 0;
+  margin-right: 0;
   height: 9vh;
+}
+
+.col-color-bar-last {
+  margin-left: 0;
+  margin-right: 0;
+  height: 10vh;
+}
+
+.container-0padding {
+  padding: 0 !important;
+  // overflow-x: hidden;
 }
 
 .bg-my-md-info {
@@ -30,7 +43,7 @@
 .logo-placement {
   top: 19vh; // calc(22vh + 70px)
   z-index: 10;
-  width: 97%;
+  // width: auto;
 }
 
 .margin-title {
