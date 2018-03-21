@@ -11,7 +11,7 @@ User.destroy_all
 u = User.create!(name: "Tanja", email: "tanja@lewagon.com", password: "123456")
 v = User.create!(name: "Juandi", email: "juandi@lewagon.com", password: "123456")
 w = User.create!(name: "Johan", email: "johan@lewagon.com", password: "123456")
-a = User.create!(name: "Admin", email: "admin@lewagon.com", password: "123456")
+a = User.create!(name: "Admin", email: "admin@lewagon.com", password: "123456", role: "admin")
 
 puts "Creating colors..."
 
