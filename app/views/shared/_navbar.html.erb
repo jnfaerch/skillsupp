@@ -20,7 +20,12 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-                <i class="fas fa-user"></i> <%= t(".profile", default: "Profile") %>
+                <% if current_user.role == 'admin' %>
+                  <i class="fas fa-unlock"></i>
+                <% else %>
+                  <i class="fas fa-lock"></i>
+                <% end %>
+                <%= t(".admin", default: "Admin") %>
               <% end %>
             </li>
             <li>
