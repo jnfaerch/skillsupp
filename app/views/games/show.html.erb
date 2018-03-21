@@ -1,0 +1,19 @@
+<div class="competence_name <%= @game.competence.color.name %>">
+  <h3><%= @game.competence.name %></h3>
+</div>
+<div class= "container">
+  <h2><%= @game.name %></h2>
+
+  <% @game.questions.each do |question| %>
+   <%=question.content  %>
+  <% end %>
+
+  <%= simple_form_for [@game, @question] do |f| %>
+    <%= f.input :content %>
+    <%= f.input :feedback %>
+    <%= f.input :question_type %>
+    <div class="fixed-bottom bg-white">
+      <%= f.button :submit, "Create a new question!", class: "btn btn-lg btn-danger btn-answer-block" %>
+    </div>
+  <% end %>
+</div>

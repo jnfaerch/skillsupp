@@ -1,0 +1,12 @@
+<h2> Create a new game</h2>
+
+<%= simple_form_for @game do |f| %>
+  <%= f.association :competence %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+
+  <div class="fixed-bottom bg-white">
+    <%= f.button :submit, "Create a new game!", class: "btn btn-lg btn-danger btn-answer-block" %>
+  </div>
+<% end %>
+

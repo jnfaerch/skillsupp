@@ -10,7 +10,7 @@
     class="carousel slide" data-interval="false" data-ride="carousel">
 
       <div class="carousel-inner row">
-        <% @competence.games.each.with_index do |game, i| %>
+        <% @competence.games_with_questions.each.with_index do |game, i| %>
           <div class="carousel-item <%= 'active' if i == 1 %>">
             <div class="card card-competence <%= @competence.color.name %> col-12">
               <div class="text-box">
@@ -42,8 +42,6 @@
 
   <!-- random game choose for the user -->
   <div class="fixed-bottom bg-white">
-    <%= link_to "Choose a game for me", question_path(@competence.games.sample.questions.first),
-    class: "btn btn-lg btn-danger btn-block button-random btn-position" %>
+    <%= link_to "Choose a game for me", question_path(@competence.games_with_questions.sample.questions.first), class: "btn btn-lg btn-danger btn-block button-random btn-position" %>
   </div>
-
 </div> <!-- end of container -->
