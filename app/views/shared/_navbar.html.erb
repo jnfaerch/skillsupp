@@ -8,7 +8,7 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right d-flex">
 
-    <% if user_signed_in? %>
+    <% if user_signed_in? and current_user.role == 'admin' %>
 
       <!-- Hamburger with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -36,9 +36,14 @@
           </ul>
         </div>
       </div>
+    <% elsif user_signed_in? %>
+      <!-- Non-Admin log out -->
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fas fa-sign-out-alt navbar-logout-color"></i>
+      <% end %>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "<i class='fas fa-sign-in-alt'></i>".html_safe), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
   </div>
 
