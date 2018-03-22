@@ -4,11 +4,13 @@
 <div class= "container">
   <div class= "top-pading-question-show" >
     <div class="text-center">
-      <h6 class="btn btn-primary competence_name <%= @game.competence.color.name %>"
+      <!-- Add a new question button -->
+      <h6 class="btn btn-primary add_question_button <%= @game.competence.color.name %>"
         data-toggle="collapse" href="#collapseNewQuestion" role="button" aria-expanded="true" aria-controls="collapseNewQuestion">
-        Add a new question to <%= @game.name %>
+        Add a new question to  <br><%= @game.name %>
       </h6>
     </div>
+    <!-- Form for create a new question -->
     <div class="collapse" id="collapseNewQuestion">
       <%= simple_form_for [@game, @question] do |f| %>
         <%= f.input :game_id, :as => :hidden %>
@@ -18,46 +20,35 @@
         <%= f.input :photo, placeholder: "Photo url", label: false %>
         <%= f.input :video,placeholder: "Video url", label: false  %>
         <div class="bg-white">
-          <%= f.button :submit, "Create a new question!", class: "btn btn-lg btn-danger " %>
+          <%= f.button :submit, "Create a new question!", class: "btn btn-lg btn-danger  btn-answer-block" %>
         </div>
       <% end %>
     </div>
      <!-- if there are no question display a mesage - if not the list of questions -->
       <% if @game.questions.blank? %>
-        <h3><%= @game.name %></h3>
-        <p>This game still don't have questions</p>
+        <h3 class="title-of-questions-of-game"><%= @game.name %></h3>
+        <p class="title-of-questions-of-game">This game still don't have questions</p>
       <% else %>
       <!-- list of questions of the game-->
-        <h3>Questions of <%= @game.name %>:</h3>
+        <h3 class="title-of-questions-of-game">Questions of <%= @game.name %>:</h3>
         <ul class= "list-of-question-in-game">
           <% @game.questions.each do |question| %>
-           <li class = "question-box-in-game border border-right-0 border-left-0 text-left">
-              <h4 class="btn btn-primary"
-        data-toggle="collapse" href="#collapseQuestion<%= question.id %>" role="button" aria-expanded="false" aria-controls="collapseQuestion<%= question.id %>"><%=question.id %></h4><br>
-
+            <li class = "question-box-in-game border border-right-0 border-left-0 text-left">
+              <!-- button with the id of the question -->
+              <h4 class="btn btn-primary question_in_game_name_button align-content-center <%= @game.competence.color.name %>"
+               href="#collapseQuestion<%= question.id %>" data-toggle="collapse"  role="button" aria-expanded="true" aria-controls="collapseQuestion<%= question.id %>">
+               Question <%=question.id %>
+              </h4><br>
+              <!-- question content -->
               <div class="collapse" id="collapseQuestion<%= question.id %>">
                 <strong>Question content:</strong><br><%=question.content %> <br>
                 <strong>Question feedback:</strong><br><%=question.feedback  %><br>
                 <strong>Question type:</strong><br><%=question.question_type  %>
               </div>
-           </li>
+            </li>
           <% end %>
         </ul>
       <% end %>
     </div>
   </div>
 </div>
-
-
-    <div >
-      <h6 class="btn"
-        data-toggle="collapse" href="#collapseNewQuestion2" role="button" aria-expanded="true" aria-controls="collapseNewQuestion2"> oihouh
-
-      </h6>
-    </div>
-    <div class="collapse" id="collapseNewQuestion2">
-      <p>kugluyfgkuyv</p>
-    </div>
-
-    </div>
-
