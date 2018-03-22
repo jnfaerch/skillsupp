@@ -1,7 +1,44 @@
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css');
+
 .game-show-title {
   margin: 20px;
 }
 
 .list-of-question-in-game {
   list-style-type: none;
+  padding-left: 0px;
+}
+
+.add_question_button {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  border-color: transparent;
+}
+
+.add_question_button:hover{
+  border-color: transparent;
+}
+
+.question_in_game_name_button {
+  padding: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  border-color: transparent;
+}
+
+.question_in_game_name_button:hover{
+  border-color: transparent;
+}
+
+.title-of-questions-of-game{
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
 }
