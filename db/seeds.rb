@@ -143,13 +143,6 @@ game12 = Game.create!(
 puts "Creating question..."
 
 # Game 1 / social skills
-question2 = Question.create!(
-  content: "You are in a bad mood and the first person you see is the one you hate. How do you react?",
-  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea.<br>You never know when you'll have to work together next time...",
-  question_type: "type2 ",
-  game: game1
-)
-
 question1 = Question.create!(
   content: "Choose the right answer for successful communication with your colleagues:",
   feedback: "All those who communicate with screams have so far perished at some point...",
@@ -157,14 +150,7 @@ question1 = Question.create!(
   game: game1
 )
 
-question3 = Question.create!(
-  content: "What is the best way to express your joy about a successful project?",
-  feedback: "It is always a good idea to celebrate! <br>Just don't get the idea of flirting drunk with your boss!",
-  question_type: "type2 ",
-  game: game1
-)
-
-question4 = Question.create!(
+question2 = Question.create!(
   content: "What is the first step to successfully assert your concern with your team members?",
   feedback: "1. Make yourself aware of what your concern is and why it is important for you, for your organization and other people.<br><br>
 
@@ -176,6 +162,19 @@ And how much is the person convinced of the sense/nonsense of the project?<br><b
   question_type: "video",
   game: game1,
   video: "UkYsd0Ibxp4"
+)
+
+question3 = Question.create!(
+  content: "What is the best way to express your joy about a successful project?",
+  feedback: "It is always a good idea to celebrate! <br>Just don't get the idea of flirting drunk with your boss!",
+  question_type: "type2 ",
+  game: game1
+)
+question4 = Question.create!(
+  content: "You are in a bad mood and the first person you see is the one you hate. How do you react?",
+  feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea.<br>You never know when you'll have to work together next time...",
+  question_type: "type2 ",
+  game: game1
 )
 
 # game 2 / social skills
@@ -498,25 +497,25 @@ puts "Creating answers..."
 answer1 = Answer.create!(
   content: "I invite the person to a coffee.",
   correct: false,
-  question: question2
+  question: question4
 )
 
 answer2 = Answer.create!(
   content: "I punch the person in the face.",
   correct: false,
-  question: question2
+  question: question4
 )
 
 answer3 = Answer.create!(
   content: "I give the person an evil look.",
   correct: false,
-  question: question2
+  question: question4
 )
 
 answer4 = Answer.create!(
   content: "I friendly say hello to the person.",
   correct: true,
-  question: question2
+  question: question4
 )
 
 # game 1 / social skills / project joy
@@ -570,25 +569,25 @@ answer12 = Answer.create!(
 answer13 = Answer.create!(
   content: "Clarity of approach",
   correct: true,
-  question: question4
+  question: question2
 )
 
 answer14 = Answer.create!(
   content: "Identify relevant players",
   correct: false,
-  question: question4
+  question: question2
 )
 
 answer15 = Answer.create!(
   content: "Relationship analysis",
   correct: false,
-  question: question4
+  question: question2
 )
 
 answer16 = Answer.create!(
   content: "Think about strategic options",
   correct: false,
-  question: question4
+  question: question2
 )
 
 # game 4 / self management /
