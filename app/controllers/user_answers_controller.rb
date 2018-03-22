@@ -33,7 +33,7 @@ class UserAnswersController < ApplicationController
 
   def user_answer_correct
 
-    if  @question.answers.blank? || params[:user_answer][:chosen_answer_id] == @question.answers.where(correct: true).first.id.to_s
+    if  @question.answers.blank? || @question.answers.where(correct: true).blank? || params[:user_answer][:chosen_answer_id] == @question.answers.where(correct: true).first.id.to_s
       @user_answer.correct = true
     else
       @user_answer.correct = false

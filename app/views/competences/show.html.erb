@@ -11,7 +11,7 @@
 
       <div class="carousel-inner row">
         <% @competence.games_with_questions.each.with_index do |game, i| %>
-          <div class="carousel-item <%= 'active' if i == 1 %>">
+          <div class="carousel-item <%= 'active' if i == 0 %>">
             <div class="card card-competence <%= @competence.color.name %> col-12">
               <div class="text-box">
                 <h3><%= link_to game.name, question_path(game.questions.first) %></h3>
@@ -21,7 +21,6 @@
           </div>
         <% end %>
       </div>
-
       <a class="carousel-control-prev" href="#carouselExampleControls"
       role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,7 +35,7 @@
 
     <!-- description of competence -->
     <div class="competence_description">
-      <p class="base-text"><%= @competence.description %></p>
+      <p class="base-text"><%= @competence.description.html_safe %></p>
     </div>
   </div> <!-- end of games list -->
 

@@ -36,7 +36,9 @@ class PagesController < ApplicationController
   end
 
   def admin
-
+    @users = User.all
+    @user_answers = UserAnswer.all.size
+    @question_all = Question.all.size
   end
 
   private
