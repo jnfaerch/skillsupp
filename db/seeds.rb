@@ -143,14 +143,14 @@ game12 = Game.create!(
 puts "Creating question..."
 
 # Game 1 / social skills
-question1 = Question.create!(
+question2 = Question.create!(
   content: "You are in a bad mood and the first person you see is the one you hate. How do you react?",
   feedback: "Even if we would like to beat someone up sometimes, especially on Monday mornings, it's never a good idea.<br>You never know when you'll have to work together next time...",
   question_type: "type2 ",
   game: game1
 )
 
-question2 = Question.create!(
+question1 = Question.create!(
   content: "Choose the right answer for successful communication with your colleagues:",
   feedback: "All those who communicate with screams have so far perished at some point...",
   question_type: "type2 ",
@@ -180,29 +180,31 @@ And how much is the person convinced of the sense/nonsense of the project?<br><b
 
 # game 2 / social skills
 question5 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
-  question_type: "type2 ",
-  game: game2
+  content: "The best conflict management style is…",
+  feedback: "The problem solving style helps everyone understand in the conflict to review reasons and understand the pros and cons.",
+  question_type: "photo",
+  game: game2,
+  photo: "conflict.jpg"
+
 )
 
 question6 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  content: "The conflict management styles that can get you into the most trouble are…",
+  feedback: "",
   question_type: "type2 ",
   game: game2
 )
 
 question7 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  content: "The first thing to do when resolving conflict with someone else is to…",
+  feedback: "",
   question_type: "type2 ",
   game: game2
 )
 
 question8 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  content: "You should use the forcing conflict management style when…",
+  feedback: "",
   question_type: "type2 ",
   game: game2
 )
@@ -239,36 +241,44 @@ question12 = Question.create!(
 # game 4 / self management
 question13 = Question.create!(
   content: "When a football player scores a perfectly scored own goal, then he is...",
-  feedback: "Now think by yourself: What's worse in the daily business, not effective or not efficient? Why?",
-  question_type: "type1 ",
+  feedback: "Take a moment and think about your own daily work.<br>Are there situations in which you are efficient but not very effective?<br>How could you change that?",
+  question_type: "type 1",
   game: game4
-)
+  )
+
 question14 = Question.create!(
   content: "How much buffering time do you have to plan for unforeseen events these days?",
-  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times.<br>This requires flexible time management.",
+  feedback: "We live in a fast-moving environment where unforeseen changes happen at all times.<br>This requires more flexible time management.",
   question_type: "type1 ",
   game: game4
 )
 question15 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
-  question_type: "type1 ",
-  game: game4
+  content: "The power of focus.<br><br>
+  Without it, you're doomed to a life of distraction.<br>
+  A life in which others' priorities dictate on what you spend your time.<br>As you move from one shiny object to another, you may get lots of things done--but few things ever get done well.
+  <br><br>Or, you may find your life is ruled by procrastination, where doing great work is derailed by social media and YouTube videos.
+  <br><br>But does focus mean? Watch the video and answer the questions below.",
+  feedback: "Learning to say no begins by sharpening your emotional intelligence--the ability to make emotions work for you, instead of against you.
+  <br><br>By refusing to let temporary emotions lead to permanent decisions, you'll realize that lack of focus easily leads to regret.
+  <br><br>What are your next steps in improving your focusing skills?",
+  question_type: "video",
+  game: game4,
+  video: "H8eP99neOVs"
 )
-question16 = Question.create!(
-  content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
-  question_type: "type1 ",
-  game: game4
-)
+# question16 = Question.create!(
+#   content: " question 1content content content content content content content content content ",
+#   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+#   question_type: "type1 ",
+#   game: game4
+# )
 
 # game 5 / self management
 question17 = Question.create!(
   content: " question 1content content content content content content content content content ",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
-  question_type: "type1 ",
+  question_type: "video",
   game: game5,
-  video: "DMpdPrm6Ul4"
+  video: "yL7X3DTyS2Q"
 )
 question18 = Question.create!(
   content: " question 1content content content content content content content content content ",
@@ -346,26 +356,26 @@ question28 = Question.create!(
 # game 8 / corporate culture
 question29 = Question.create!(
   content: " Indonesia's anti-drug chief announced the use of crocodiles to guard death row prisoners on an isolated island in Indonesia because, contrary to humans, crocodiles cannot be bribed:<br>'We will place as many crocodiles as we can there. I will search for the most ferocious type of crocodile.'",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  feedback: "",
   question_type: "type1 ",
   game: game8
 )
 
 question30 = Question.create!(
   content: "What is the first step to successfully assert your concern with your team members?",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  feedback: "",
   question_type: "type1 ",
   game: game8
 )
 question31 = Question.create!(
   content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  feedback: "",
   question_type: "type1 ",
   game: game8
 )
 question32 = Question.create!(
   content: " question 1content content content content content content content content content ",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  feedback: "",
   question_type: "type1 ",
   game: game8
 )
@@ -378,7 +388,7 @@ question33 = Question.create!(
   game: game9
 )
 question34 = Question.create!(
-  content: "how corrupt are you?",
+  content: "question 1content content content content content content content content content",
   feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
   question_type: "type1 ",
   game: game9
@@ -400,30 +410,31 @@ question36 = Question.create!(
 question37 = Question.create!(
   content: "Indonesia's anti-drug chief announced the use of crocodiles to guard
 death row prisoners on an isolated island in Indonesia because,
-contrary to humans, crocodiles cannot be bribed:<br>'We will place as
+contrary to humans, crocodiles cannot be bribed:<br><br>'We will place as
 many crocodiles as we can there. I will search for the most ferocious
 type of crocodile.'",
   feedback: "Indonesia's government quickly explained it was a joke, but
 days later the anti-drug chief said he might use tigers and piranha
 fish, too.",
-  question_type: "type1 ",
-  game: game10
+  question_type: "photo",
+  game: game10,
+  photo: "crocodile.png"
 )
 question38 = Question.create!(
   content: "What is blackmail?",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  feedback: "",
   question_type: "type1 ",
   game: game10
 )
 question39 = Question.create!(
   content: "What is corruption?",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  feedback: "",
   question_type: "type1 ",
   game: game10
 )
 question40 = Question.create!(
   content: "What is a conflict of interest?",
-  feedback: "feedback feedback feedback feedback feedback feedback feedback feedback ",
+  feedback: "",
   question_type: "type1 ",
   game: game10
 )
@@ -487,47 +498,47 @@ puts "Creating answers..."
 answer1 = Answer.create!(
   content: "I invite the person to a coffee.",
   correct: false,
-  question: question1
+  question: question2
 )
 
 answer2 = Answer.create!(
   content: "I punch the person in the face.",
   correct: false,
-  question: question1
+  question: question2
 )
 
 answer3 = Answer.create!(
   content: "I give the person an evil look.",
   correct: false,
-  question: question1
+  question: question2
 )
 
 answer4 = Answer.create!(
   content: "I friendly say hello to the person.",
   correct: true,
-  question: question1
+  question: question2
 )
 
 # game 1 / social skills / project joy
 answer5 = Answer.create!(
   content: "Scream and demand.",
   correct: false,
-  question: question2
+  question: question1
 )
 answer6 = Answer.create!(
   content: "Scream and whine.",
   correct: false,
-  question: question2
+  question: question1
 )
 answer7 = Answer.create!(
   content: "Explain and ask.",
   correct: true,
-  question: question2
+  question: question1
 )
 answer8 = Answer.create!(
   content: "Demand and ask.",
   correct: false,
-  question: question2
+  question: question1
 )
 
 # game 1 / social skills / demanding
@@ -628,49 +639,49 @@ answer24 = Answer.create!(
 
 # game 4 / self management
 answer25 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
+  content: "Saying no to the hundred other good ideas that there are.",
+  correct: true,
   question: question15
 )
 answer26 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "Saying yes to the thing you’ve got to focus on.",
   correct: false,
   question: question15
 )
 answer27 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
+  content: "Eliminating projects that don’t contribute to the vision of the company.",
   correct: true,
   question: question15
 )
-answer28 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question15
-)
+# answer28 = Answer.create!(
+#   content: "",
+#   correct: false,
+#   question: question15
+# )
 
-# game 4 / self management
-answer29 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question16
-)
+# # game 4 / self management
+# answer29 = Answer.create!(
+#   content: " answer 1content content content content content content content content content ",
+#   correct: false,
+#   question: question16
+# )
 
-answer30 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question16
-)
+# answer30 = Answer.create!(
+#   content: " answer 1content content content content content content content content content ",
+#   correct: false,
+#   question: question16
+# )
 
-answer31 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question16
-)
-answer32 = Answer.create!(
-  content: " answer 1content content content content content content content content content ",
-  correct: false,
-  question: question16
-)
+# answer31 = Answer.create!(
+#   content: " answer 1content content content content content content content content content ",
+#   correct: false,
+#   question: question16
+# )
+# answer32 = Answer.create!(
+#   content: " answer 1content content content content content content content content content ",
+#   correct: false,
+#   question: question16
+# )
 
 # game 7 / Corporate Culture
 answer33 = Answer.create!(
@@ -849,6 +860,93 @@ answer64 = Answer.create!(
   correct: false,
   question: question40
 )
+
+# game 2 / conflict handling
+answer65 = Answer.create!(
+  content: "The avoiding style",
+  correct: false,
+  question: question5
+)
+answer66 = Answer.create!(
+  content: "The problem-solving style",
+  correct: true,
+  question: question5
+)
+answer67 = Answer.create!(
+  content: "The bargaining style",
+  correct: false,
+  question: question5
+)
+answer68 = Answer.create!(
+  content: "The smoothing style",
+  correct: false,
+  question: question5
+)
+
+answer69 = Answer.create!(
+  content: "The avoiding style",
+  correct: true,
+  question: question6
+)
+answer70 = Answer.create!(
+  content: "The problem-solving style",
+  correct: false,
+  question: question6
+)
+answer71 = Answer.create!(
+  content: "The forcing style",
+  correct: true,
+  question: question6
+)
+answer72 = Answer.create!(
+  content: "The bargaining style",
+  correct: false,
+  question: question6
+)
+
+answer73 = Answer.create!(
+  content: "Assertively but diplomatically state your perspective",
+  correct: false,
+  question: question7
+)
+answer74 = Answer.create!(
+  content: "Brainstorm possible solutions to the problem",
+  correct: false,
+  question: question7
+)
+answer75 = Answer.create!(
+  content: "Slap some sense into them",
+  correct: false,
+  question: question7
+)
+answer76 = Answer.create!(
+  content: "Listen to their perspective",
+  correct: true,
+  question: question7
+)
+
+answer77 = Answer.create!(
+  content: "You need to arrive at a workable solution under time pressure.",
+  correct: false,
+  question: question8
+)
+answer78 = Answer.create!(
+  content: "A creative solution is critical.",
+  correct: true,
+  question: question8
+)
+answer79 = Answer.create!(
+  content: "Quick, decisive action is important.",
+  correct: false,
+  question: question8
+)
+answer80 = Answer.create!(
+  content: "People need to work through their emotions surrounding the conflict.",
+  correct: false,
+  question: question8
+)
+
+
 
 puts 'Finished!'
 

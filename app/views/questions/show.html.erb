@@ -11,6 +11,8 @@
   <%= render "shared/feedback_answer" %>
 
 <!-- Display the questions - if the question has never been answered before -->
+<% elsif @question.question_type == "photo" %>
+  <%= render "shared/question_photo" %>
 <% elsif @question.question_type == "video" %>
   <%= render "shared/question_video" %>
 <% else %>

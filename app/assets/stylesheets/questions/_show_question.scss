@@ -26,6 +26,7 @@
   border-radius: 0.3rem;
   padding-top: 0px;
   padding-bottom: 0px;
+  margin-bottom: 5px;
 }
 
 .question_field form {
@@ -48,6 +49,13 @@
 .video-padding {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.picture-padding {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .game_name_in_question_show {
