@@ -39,6 +39,9 @@ class PagesController < ApplicationController
     @users = User.all
     @user_answers = UserAnswer.all.size
     @question_all = Question.all.size
+    @question_all_list = Question.all
+    @games_all = Game.all
+    @competences_all = Competence.all
   end
 
   private

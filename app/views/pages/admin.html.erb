@@ -12,27 +12,14 @@
     <div class="row">
       <!-- Links to new and edit -->
       <div class="col-12 text-center">
-        <%= link_to "Create a new game", new_game_path, class: "btn btn-danger deny-header" %>
+        <%= link_to "Create a new game", new_game_path, class: "btn btn-lg btn-danger deny-header" %>
       </div>
-
-      <!-- progress bar showing total answers always at 100 which doesn't make sence! -->
-      <!-- <div class="col-2 col-md-1">
-        <div class="progress mt-auto">
-          <div id="goalBarAdminAll"
-          class="progress-bar bg-primary"
-          role="progressbar"
-          aria-valuenow="<%#= @question_all * 100 / @question_all %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-          </div>
-        </div>
-      </div> -->
-
     </div> <!-- row end -->
 
     <div class="row"> <!-- Statistics -->
       <!-- progress bar showing average of all user answers compared to total answers -->
       <div class="col-12">
-        <p class="d-block d-md-none deny-header">Average User Progress: <strong><span id="adminTextMobile"></span></strong></p>
-        <h3 class="d-none d-md-block deny-header">Average User Progress: <strong><span id="adminText"></span></strong></h3>
+        <h3 class="deny-header">Average User Progress: <strong><span id="adminText"></span></strong></h3>
         <div class="progress mt-auto">
           <div id="goalBarAdmin"
           class="progress-bar bg-primary"
@@ -41,6 +28,46 @@
           </div>
         </div>
       </div>
+    </div> <!-- Row end -->
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h3>Competences <span class="badge badge-pill badge-danger"><%= @competences_all.size %></span></h3>
+      </div>
+      <div class="col-12 col-md-4">
+        <h3>Games <span class="badge badge-pill badge-danger"><%= @games_all.size %></span></h3>
+      </div>
+      <div class="col-12 col-md-4">
+        <h3>Questions <span class="badge badge-pill badge-danger"><%= @question_all %></span></h3>
+      </div>
+      <% @competences_all.each do |competence| %> <!-- Show all competences -->
+        <div class="col-12 col-md-3 text-center">
+          <div class="card text-white mb-3 competence-body-link
+            <%= competence.color.name %>"> <!-- Card with background color set according to class -->
+            <div class="card-body d-flex flex-column">
+              <p class="d-block d-md-none"><%= competence.name %></p>
+              <h2 class="d-none d-md-block"><%= competence.name %></h2>
+              <div class="mt-auto">
+                <i class="<%= competence.color.icon %> fa-9x img-fluid"></i>
+              </div>
+            </div>
+            <%= link_to "", competence_path(competence), class: "competence-link" %>
+          </div> <!-- Card end -->
+        </div> <!-- Col end -->
+      <% end %> <!-- Loop end -->
+
+      <%# @question_all_list.each do |game| %>
+        <!-- <div class="card card-competence <%= @competence_color %> col-3">
+            <div class="text-box">
+              <h3><%#= game.name %></h3>
+              <i class="<%#= @competence.color.icon %> fa-9x img-fluid belonging-img"></i>
+            </div> -->
+            <!-- Overlay to make entire card a link -->
+            <!-- <%#= link_to "", question_path(game.questions.first), class: "competence-link card-rounded-corners" %>
+          </div>
+        </div> -->
+      <%# end %>
+
     </div> <!-- Row end -->
 
   </div> <!-- Container-fluid end -->
