@@ -14,9 +14,11 @@
           <div class="carousel-item <%= 'active' if i == 0 %>">
             <div class="card card-competence <%= @competence.color.name %> col-12">
               <div class="text-box">
-                <h3><%= link_to game.name, question_path(game.questions.first) %></h3>
+                <h3><%= game.name %></h3>
                 <i class="<%= @competence.color.icon %> fa-9x img-fluid belonging-img"></i>
               </div>
+              <!-- Overlay to make entire card a link -->
+              <%= link_to "", question_path(game.questions.first), class: "competence-link card-rounded-corners" %>
             </div>
           </div>
         <% end %>
