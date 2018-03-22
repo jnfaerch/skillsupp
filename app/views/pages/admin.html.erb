@@ -1,5 +1,5 @@
 <% if current_user.role != "admin" %>
-  <div class="container">
+  <div class="container"> <!-- for non-admins -->
     <div class="row">
       <div class="col-12">
         <h3 class="text-center deny-header"><i class="fas fa-ban text-danger"></i> You do not have access to this content <i class="fas fa-lock text-danger"></i></h3>
@@ -7,38 +7,41 @@
     </div>
   <div> <!-- Container end -->
 <% else %>
+  <!-- For admins -->
   <div class="container-fluid" id="ProgressBarAdmin">
-    <div class="row"> <!-- Links to new and edit -->
-
-      <div class="col-2 col-md-1">
-        <div class="progress mt-auto vertical-progressbar">
-          <div id="goalBarAdmin"
-          class="progress-bar bg-primary"
-          role="progressbar"
-          aria-valuenow="<%= @user_answers * 100 / @question_all %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-          </div>
-        </div>
-      </div>
-
-      <div class="col-8 col-md-10 text-center">
+    <div class="row">
+      <!-- Links to new and edit -->
+      <div class="col-12 text-center">
         <%= link_to "Create a new game", new_game_path, class: "btn btn-danger deny-header" %>
-        <%= link_to "my games", new_game_path, class: "btn btn-danger text-white deny-header" %>
       </div>
 
-      <div class="col-2 col-md-1">
-        <div class="progress mt-auto vertical-progressbar">
+      <!-- progress bar showing total answers always at 100 which doesn't make sence! -->
+      <!-- <div class="col-2 col-md-1">
+        <div class="progress mt-auto">
           <div id="goalBarAdminAll"
           class="progress-bar bg-primary"
           role="progressbar"
-          aria-valuenow="<%= @question_all * 100 / @question_all %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          aria-valuenow="<%#= @question_all * 100 / @question_all %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          </div>
+        </div>
+      </div> -->
+
+    </div> <!-- row end -->
+
+    <div class="row"> <!-- Statistics -->
+      <!-- progress bar showing average of all user answers compared to total answers -->
+      <div class="col-12">
+        <p class="d-block d-md-none deny-header">Average User Progress: <strong><span id="adminTextMobile"></span></strong></p>
+        <h3 class="d-none d-md-block deny-header">Average User Progress: <strong><span id="adminText"></span></strong></h3>
+        <div class="progress mt-auto">
+          <div id="goalBarAdmin"
+          class="progress-bar bg-primary"
+          role="progressbar"
+          aria-valuenow="<%= @user_answers * 100 / @users.size / @question_all %>" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
           </div>
         </div>
       </div>
+    </div> <!-- Row end -->
 
-    </div>
-
-    <div class="row"> <!-- Statistics -->
-
-    </div>
-  </div>
+  </div> <!-- Container-fluid end -->
 <% end %>
