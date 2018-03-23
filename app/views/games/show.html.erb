@@ -27,7 +27,7 @@
      <!-- if there are no question display a mesage - if not the list of questions -->
       <% if @game.questions.blank? %>
         <h3 class="title-of-questions-of-game"><%= @game.name %></h3>
-        <p class="title-of-questions-of-game">This game still don't have questions</p>
+        <p class="title-of-questions-of-game">This game doesn't have questions yet</p>
       <% else %>
       <!-- list of questions of the game-->
         <h3 class="title-of-questions-of-game">Questions of <%= @game.name %>:</h3>
