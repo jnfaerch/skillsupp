@@ -6,9 +6,14 @@
   color: white;
 }
 
-.vertical-progressbar{
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  width: 100px;
+.text-under-card-icon {
+  margin-bottom: 20px;
+}
+
+.header-margin-count {
+  margin-top: 20px;
+}
+
+.footer-margin-count {
+  margin-bottom: 20px;
 }
