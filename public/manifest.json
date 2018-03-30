@@ -7,17 +7,17 @@
   "start_url": "home.html?launcher=true",
   "icons": [
     {
-      "src": "/app/assets/images/logo_150.png",
+      "src": "/logo_150.png",
       "sizes": "150x150",
       "type": "image/png"
     },
     {
-      "src": "/app/assets/images/logo_300.png",
+      "src": "/logo_300.png",
       "sizes": "300x300",
       "type": "image/png"
     },
     {
-      "src": "/app/assets/images/logo.png",
+      "src": "/logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
