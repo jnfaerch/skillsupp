@@ -1,0 +1,20 @@
+{
+  "short_name": "UpSkill",
+  "name": "UpSkill",
+  "background_color": "#4BBD94",
+  "theme_color": "#4BBD94",
+  "display": "standalone",
+  "start_url": "index.html?launcher=true",
+  "icons": [
+    {
+      "src": "/images/logo_150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo_300.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    }
+  ]
+}
