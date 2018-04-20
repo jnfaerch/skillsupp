@@ -1,19 +1,25 @@
-<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
 {
-  "name": "My Progressive Rails App",
-  "short_name": "Progressive",
-  "start_url": "/",
+  "short_name": "UpSkill",
+  "name": "UpSkill",
+  "background_color": "#4BBD94",
+  "theme_color": "#4BBD94",
+  "display": "standalone",
+  "start_url": "/?utm_source=homescreen",
   "icons": [
-  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
     {
-      "src": "<%= image_path "serviceworker-rails/heart-#{dim}.png" %>",
-      "sizes": "<%= dim %>",
+      "src": "/logo_150.png",
+      "sizes": "150x150",
       "type": "image/png"
-    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
-  <% end %>
-  ],
-  "theme_color": "#000000",
-  "background_color": "#FFFFFF",
-  "display": "fullscreen",
-  "orientation": "portrait"
+    },
+    {
+      "src": "/logo_300.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
