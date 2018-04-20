@@ -20,6 +20,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'serviceworker-rails'
 
 # Precompiling on Heroku fails so added this
 # group :assets do
