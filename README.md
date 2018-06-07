@@ -1,3 +1,5 @@
+Project has moved to GitLab!
+
 Rails web app created by Johan Faerch, Juandi García, Tanja Kohlen.
 
 'UpSkill' is meant to be a micro learning app for corporations focusing on improving the skills of their employees. Especially it can be used for in-house training like values, procedures and the like but also for extending the outcome of conferences or in-house or external courses.
