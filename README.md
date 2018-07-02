@@ -1,4 +1,4 @@
-Project has moved to GitLab!
+ACTIVE PROJECT HAS MOVED TO GITLAB! https://gitlab.com/jnfaerch/skillsupp
 
 Rails web app created by Johan Faerch, Juandi García, Tanja Kohlen.
 
