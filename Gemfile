@@ -10,7 +10,7 @@ gem 'rails', '5.1.5'
 gem 'redis'
 
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'sprockets-rails'
 gem 'font_awesome5_rails', '~> 0.2.2'
